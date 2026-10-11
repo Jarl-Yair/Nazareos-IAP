@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
-    
+
     <!--Iconos-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!--Animaciones AOS-->
@@ -339,15 +339,24 @@
 
         <!--Alianzas-->
         <div class="footer-alianzas">
-            <a href="https://www.facebook.com/TiendasUrbanCoatings" target="_blank"><img src="IMG/B1.webp" width="80" height="80" alt="URBAN" loading="lazy"></a>
-            <a href="https://www.facebook.com/CEMSARecubrimientos" target="_blank"><img src="IMG/B2.webp" width="80" height="80" alt="CEMSA" loading="lazy"></a>
-            <a href="https://www.facebook.com/jarlserv" target="_blank"><img src="IMG/B3.webp" width="80" height="80" alt="JARL" loading="lazy"></a>
-            <a href="https://www.facebook.com/nazareosiap" target="_blank"><img src="IMG/B4.webp" width="80" height="80" alt="NAZAREOS IAP" loading="lazy"></a>
-            <a href="http://www.cemsamx.com/G.html" target="_blank"><img src="IMG/GC22.webp" width="80" height="80" alt="GC" loading="lazy"></a>
-            <a href="https://www.facebook.com/nazareosac1" target="_blank"><img src="IMG/B5.webp" width="80" height="80" alt="NAZAREOS AC" loading="lazy"></a>
-            <a href="https://www.facebook.com/people/EC-Gens-Solutions/100068549594726/" target="_blank"><img src="IMG/B6.webp" width="80" height="80" alt="GENS" loading="lazy"></a>
-            <a href="https://www.facebook.com/people/EPP/100088719123320/" target="_blank"><img src="IMG/B7.webp" width="80" height="80" alt="EPP" loading="lazy"></a>
-            <a href="https://www.facebook.com/KumonSanJuanTultepecEdomex" target="_blank"><img src="IMG/B8.webp" width="80" height="80" alt="KUMON" loading="lazy"></a>
+            <a href="https://www.facebook.com/TiendasUrbanCoatings" target="_blank"><img src="IMG/B1.webp" width="80"
+                    height="80" alt="URBAN" loading="lazy"></a>
+            <a href="https://www.facebook.com/CEMSARecubrimientos" target="_blank"><img src="IMG/B2.webp" width="80"
+                    height="80" alt="CEMSA" loading="lazy"></a>
+            <a href="https://www.facebook.com/jarlserv" target="_blank"><img src="IMG/B3.webp" width="80" height="80"
+                    alt="JARL" loading="lazy"></a>
+            <a href="https://www.facebook.com/nazareosiap" target="_blank"><img src="IMG/B4.webp" width="80" height="80"
+                    alt="NAZAREOS IAP" loading="lazy"></a>
+            <a href="http://www.cemsamx.com/G.html" target="_blank"><img src="IMG/GC22.webp" width="80" height="80"
+                    alt="GC" loading="lazy"></a>
+            <a href="https://www.facebook.com/nazareosac1" target="_blank"><img src="IMG/B5.webp" width="80" height="80"
+                    alt="NAZAREOS AC" loading="lazy"></a>
+            <a href="https://www.facebook.com/people/EC-Gens-Solutions/100068549594726/" target="_blank"><img
+                    src="IMG/B6.webp" width="80" height="80" alt="GENS" loading="lazy"></a>
+            <a href="https://www.facebook.com/people/EPP/100088719123320/" target="_blank"><img src="IMG/B7.webp"
+                    width="80" height="80" alt="EPP" loading="lazy"></a>
+            <a href="https://www.facebook.com/KumonSanJuanTultepecEdomex" target="_blank"><img src="IMG/B8.webp"
+                    width="80" height="80" alt="KUMON" loading="lazy"></a>
         </div>
 
         <!--Creditos-->
@@ -543,26 +552,25 @@
         tarjetasFormacion.forEach(tarjeta => {
             tarjeta.addEventListener('click', function (e) {
                 e.preventDefault();
-
-                // 1. Busca todas las tarjetas y las cierrra
                 tarjetasFormacion.forEach(t => {
                     if (t !== this) {
                         t.classList.remove('activa');
                     }
                 });
-
-                // 2. Abre o cierra solo a la que se le da clic
                 this.classList.toggle('activa');
             });
         });
 
-        // SCRIPT PARA ABRIR Y CERRAR MODALES
+        // ==========================================
+        // EVENTOS DEL DOM (Modales y Hamburguesa)
+        // ==========================================
         document.addEventListener("DOMContentLoaded", () => {
+
+            // 1. SCRIPT PARA ABRIR Y CERRAR MODALES
             const botonesAbrir = document.querySelectorAll('.abrir-modal');
             const botonesCerrar = document.querySelectorAll('.cerrar-modal');
             const modales = document.querySelectorAll('.modal-ventana');
 
-            // Abre el modal y no hace el salto arriba
             botonesAbrir.forEach(boton => {
                 boton.addEventListener('click', (e) => {
                     e.preventDefault();
@@ -575,7 +583,6 @@
                 });
             });
 
-            // Cierra el modal desde la X
             botonesCerrar.forEach(boton => {
                 boton.addEventListener('click', () => {
                     const modal = boton.closest('.modal-ventana');
@@ -586,7 +593,6 @@
                 });
             });
 
-            // Cierra el modal dando clic afuera de la caja
             window.addEventListener('click', (e) => {
                 modales.forEach(modal => {
                     if (e.target === modal) {
@@ -596,29 +602,43 @@
                 });
             });
 
-            // MENU HAMBURGUESA CELULAR
-            document.addEventListener("DOMContentLoaded", () => {
-                const menuToggle = document.getElementById('mobile-menu');
-                const navMenu = document.getElementById('nav-menu');
+            // 2. SCRIPT PARA EL MENÚ HAMBURGUESA
+            const menuToggle = document.getElementById('mobile-menu');
+            const navMenu = document.getElementById('nav-menu');
+            // Buscamos los enlaces dentro del menú para cerrarlo al hacerles clic
+            const linksMenu = navMenu ? navMenu.querySelectorAll('a') : [];
 
-                if (menuToggle && navMenu) {
-                    menuToggle.addEventListener('click', () => {
-                        navMenu.classList.toggle('activo');
+            if (menuToggle && navMenu) {
+                // Abrir/Cerrar al tocar el icono
+                menuToggle.addEventListener('click', () => {
+                    navMenu.classList.toggle('activo');
 
-                        // Cambiar icono de Hamburguesa a una X
+                    // Cambiar icono de Hamburguesa (Barras) a una 'X'
+                    const icono = menuToggle.querySelector('i');
+                    if (navMenu.classList.contains('activo')) {
+                        icono.classList.remove('fa-bars');
+                        icono.classList.add('fa-xmark');
+                    } else {
+                        icono.classList.remove('fa-xmark');
+                        icono.classList.add('fa-bars');
+                    }
+                });
+
+                // Cerrar menú automáticamente cuando tocan un enlace (ej. Contacto)
+                linksMenu.forEach(link => {
+                    link.addEventListener('click', () => {
+                        navMenu.classList.remove('activo');
                         const icono = menuToggle.querySelector('i');
-                        if (navMenu.classList.contains('activo')) {
-                            icono.classList.remove('fa-bars');
-                            icono.classList.add('fa-xmark');
-                        } else {
+                        if (icono) {
                             icono.classList.remove('fa-xmark');
                             icono.classList.add('fa-bars');
                         }
                     });
-                }
-            });
+                });
+            }
         });
     </script>
+
 </body>
 
 </html>
