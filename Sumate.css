@@ -619,7 +619,7 @@
     }
 }
 
-/* RESPONSIVIDAD Y MENÚ HAMBURGUESA  */
+/*RESPONSIVE DESIGN*/
 .menu-toggle {
     display: none;
 }
@@ -634,9 +634,14 @@
     .menu-toggle {
         display: block;
         font-size: 30px;
-        color: var(--color-oscuro);
+        color: var(--color-blanco);
         cursor: pointer;
-        z-index: 1000;
+        z-index: 1002;
+        transition: color 0.3s;
+    }
+
+    .header-premium.sticky .menu-toggle {
+        color: var(--color-oscuro);
     }
 
     .btn-donar-premium {
@@ -656,14 +661,15 @@
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         transition: left 0.4s ease;
         gap: 25px;
+        z-index: 1000;
     }
 
-    /* Clase que se activa con Javascript */
     .nav-menu.activo {
         left: 0;
     }
 
     .nav-menu a {
+        color: var(--color-oscuro);
         font-size: 20px;
         width: 100%;
         text-align: center;
@@ -671,61 +677,97 @@
 
     .btn-donar-movil {
         display: inline-block;
-        background: var(--color-secundario);
+        background: var(--color-primario) !important;
         color: var(--color-blanco) !important;
-        padding: 10px 30px;
+        padding: 12px 30px;
         border-radius: 50px;
         margin-top: 10px;
     }
 
-    /* --- AJUSTES DE ESTRUCTURA GENERAL --- */
-    .grid-2-col,
-    .grid-3-col,
-    .grid-donacion,
-    .seccion-visitanos-split {
-        grid-template-columns: 1fr !important;
-        flex-direction: column !important;
+    /* --- AJUSTES DE ESTRUCTURA A 1 COLUMNA --- */
+    .grid-3-col {
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
 
-    .visitanos-img-col {
-        min-height: 250px;
+    .grid-donacion {
+        grid-template-columns: 1fr;
+        gap: 40px;
     }
 
-    .visitanos-content-col {
-        padding: 40px 20px;
+    .grid-visitas {
+        grid-template-columns: 1fr;
     }
 
-    .post-it-suscripcion,
-    .post-it-interactivo,
+    /* --- TARJETAS Y POST-IT RESPONSIVOS --- */
     .post-it-premium {
         transform: rotate(0deg) !important;
-        max-width: 100%;
         padding: 30px 20px;
+        box-sizing: border-box;
     }
 
     .cinta-adhesiva {
         transform: translateX(-50%) rotate(0deg) !important;
     }
 
-    /* Fuentes más pequeñas */
-    h1,
-    .titulo-hero-sumate {
-        font-size: 35px !important;
+    .tarjeta-credito-ui {
+        max-width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
     }
 
-    h2,
-    .visitanos-content-col h2 {
-        font-size: 30px !important;
+    .tarjeta-numero {
+        font-size: 18px;
     }
 
-    /* Footer */
+    /* --- FUENTES --- */
+    .titulo-seccion h2 {
+        font-size: 32px;
+    }
+
+    /* --- CUBO 3D FIX --- */
+    .cubo-contenedor {
+        height: 200px;
+    }
+
+    .frente {
+        transform: rotateX(0deg) translateZ(100px);
+    }
+
+    .arriba {
+        transform: rotateX(90deg) translateZ(100px);
+    }
+
+    .atras {
+        transform: rotateX(180deg) translateZ(100px);
+    }
+
+    .abajo {
+        transform: rotateX(-90deg) translateZ(100px);
+    }
+
+    /* --- FOOTER --- */
     .footer-main {
-        flex-direction: column;
+        grid-template-columns: 1fr;
         text-align: center;
+        gap: 30px;
     }
 
-    .footer-col h4::before {
+    .footer-col h4::after {
         left: 50%;
         transform: translateX(-50%);
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    .footer-alianzas {
+        gap: 15px;
+    }
+
+    .footer-alianzas img {
+        width: 60px;
+        height: 60px;
     }
 }
