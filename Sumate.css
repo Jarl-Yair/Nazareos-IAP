@@ -684,6 +684,16 @@
         margin-top: 10px;
     }
 
+    /* ---HERO --- */
+    .hero-slider {
+        height: 50vh !important; 
+        min-height: 350px;     
+    }
+    
+    .slider-bg .slide {
+        background-position: center center !important;
+    }
+
     /* --- AJUSTES DE ESTRUCTURA A 1 COLUMNA --- */
     .grid-3-col {
         grid-template-columns: 1fr;
