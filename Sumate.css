@@ -1,0 +1,620 @@
+/*---HERO--- */
+.hero-slider {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin-top: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.slider-bg .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: fadeSlider 20s infinite;
+}
+
+/*Tiempos de aparicion para 4 imagenes*/
+.slider-bg .slide:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.slider-bg .slide:nth-child(2) {
+    animation-delay: 5s;
+}
+
+.slider-bg .slide:nth-child(3) {
+    animation-delay: 10s;
+}
+
+.slider-bg .slide:nth-child(4) {
+    animation-delay: 15s;
+}
+
+@keyframes fadeSlider {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    35% {
+        opacity: 0;
+        transform: scale(1.05);
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/*Degradado oscuro para proteger el menu de navegacion*/
+.hero-slider::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+    z-index: 2;
+}
+
+/*Oscurecer un poco toda la imagen para que resalte el contenido central */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+.glass-box {
+    z-index: 3;
+    position: relative;
+}
+
+/* ---RED DE VOLUNTARIOS--- */
+.grid-3-col {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card-voluntariado {
+    background: var(--color-blanco);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-voluntariado:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.voluntariado-header {
+    padding: 30px 20px;
+    text-align: center;
+    color: var(--color-oscuro);
+}
+
+.voluntariado-header h3 {
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.bg-rojo-suave {
+    background-color: #fee2e2;
+}
+
+.bg-naranja-suave {
+    background-color: #ffedd5;
+}
+
+.bg-amarillo-suave {
+    background-color: #fef9c3;
+}
+
+.voluntariado-lista {
+    list-style: none;
+    padding: 30px;
+    flex-grow: 1;
+}
+
+.voluntariado-lista li {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 500;
+}
+
+.text-rojo {
+    color: #ef4444;
+    font-size: 20px;
+}
+
+.text-naranja {
+    color: #f97316;
+    font-size: 20px;
+}
+
+.text-amarillo {
+    color: #eab308;
+    font-size: 20px;
+}
+
+.voluntariado-footer {
+    padding: 20px 30px 30px;
+    text-align: center;
+}
+
+.btn-voluntariado {
+    display: inline-block;
+    width: 100%;
+    padding: 15px;
+    border-radius: 50px;
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.btn-rojo {
+    background-color: #ef4444;
+}
+
+.btn-rojo:hover {
+    background-color: #dc2626;
+    box-shadow: 0 5px 15px rgba(239, 68, 68, 0.4);
+}
+
+.btn-naranja {
+    background-color: #f97316;
+}
+
+.btn-naranja:hover {
+    background-color: #ea580c;
+    box-shadow: 0 5px 15px rgba(249, 115, 22, 0.4);
+}
+
+.btn-amarillo {
+    background-color: #eab308;
+    color: #000;
+}
+
+.btn-amarillo:hover {
+    background-color: #ca8a04;
+    box-shadow: 0 5px 15px rgba(234, 179, 8, 0.4);
+}
+
+/* ---CUBO 3DROTATORIO RESPONSIVO--- */
+.seccion-cubo {
+    padding: 80px 20px;
+    background: var(--color-blanco);
+    overflow: hidden;
+}
+
+.subtitulo-cubo {
+    font-size: 30px;
+    color: var(--color-primario);
+    margin-bottom: 50px;
+}
+
+.cubo-contenedor {
+    width: 100%;
+    max-width: 600px;
+    height: 150px;
+    margin: 0 auto;
+    perspective: 1200px;
+}
+
+.cubo-3d {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotacionCubo 15s infinite cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.cara-cubo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--color-oscuro);
+    background: rgba(244, 157, 57, 0.15);
+    border: 2px solid var(--color-primario);
+    border-radius: 15px;
+    padding: 20px;
+    box-sizing: border-box;
+    backdrop-filter: blur(5px);
+}
+
+.frente {
+    transform: rotateX(0deg) translateZ(75px);
+}
+
+.arriba {
+    transform: rotateX(90deg) translateZ(75px);
+}
+
+.atras {
+    transform: rotateX(180deg) translateZ(75px);
+}
+
+.abajo {
+    transform: rotateX(-90deg) translateZ(75px);
+}
+
+@keyframes rotacionCubo {
+
+    0%,
+    20% {
+        transform: rotateX(0deg);
+    }
+
+    25%,
+    45% {
+        transform: rotateX(-90deg);
+    }
+
+    50%,
+    70% {
+        transform: rotateX(-180deg);
+    }
+
+    75%,
+    95% {
+        transform: rotateX(-270deg);
+    }
+
+    100% {
+        transform: rotateX(-360deg);
+    }
+}
+
+/* --- NUBE DE PALABRAS --- */
+.seccion-nube-full {
+    width: 100%;
+    margin-bottom: 60px;
+    overflow: hidden;
+}
+
+.img-nube-full {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ---SECCION DONACION & PAYPAL -- */
+.grid-donacion {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 50px;
+    align-items: center;
+}
+
+/*Post-it*/
+.post-it-premium {
+    background: #fef9c3;
+    padding: 50px 40px;
+    border-radius: 5px 25px 5px 25px;
+    position: relative;
+    box-shadow: 5px 15px 30px rgba(0, 0, 0, 0.1);
+    transform: rotate(-2deg);
+}
+
+.cinta-adhesiva {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%) rotate(2deg);
+    width: 120px;
+    height: 35px;
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.post-it-premium h3 {
+    font-size: 26px;
+    color: var(--color-oscuro);
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.institucion {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--color-primario);
+    margin-bottom: 20px;
+}
+
+.datos-banco p {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 10px;
+    font-family: monospace;
+    font-size: 17px;
+}
+
+.agradecimiento {
+    font-style: italic;
+    margin-top: 25px;
+    color: #666;
+}
+
+/*Boton modal recibos*/
+.btn-recibos {
+    display: inline-block;
+    margin-top: 25px;
+    background: var(--color-secundario);
+    color: var(--color-blanco);
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.btn-recibos:hover {
+    background: #2c8c9f;
+}
+
+/*Tarjeta BBVA*/
+.tarjeta-credito-ui {
+    background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+    width: 100%;
+    max-width: 400px;
+    height: 230px;
+    border-radius: 20px;
+    padding: 25px;
+    color: var(--color-blanco);
+    box-shadow: 0 20px 40px rgba(234, 88, 12, 0.3);
+    position: relative;
+    margin: 0 auto 40px;
+    overflow: hidden;
+}
+
+/*Efecto de brillo de la tarjeta*/
+.tarjeta-bg {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%);
+    transform: rotate(30deg);
+    pointer-events: none;
+}
+
+.tarjeta-contenido {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tarjeta-chip {
+    font-size: 40px;
+    color: #fcd34d;
+}
+
+.tarjeta-logo {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.tarjeta-logo img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.tarjeta-numero {
+    font-family: monospace;
+    font-size: 20px;
+    letter-spacing: 3px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    white-space: nowrap;
+}
+
+.tarjeta-footer {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.titular {
+    font-weight: 800;
+}
+
+/*Boton PayPal*/
+.paypal-form-box {
+    text-align: center;
+}
+
+.btn-paypal-premium {
+    background: #ffc439;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 800;
+    color: #003087;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(255, 196, 57, 0.3);
+    transition: transform 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-paypal-premium img {
+    height: 25px;
+}
+
+.btn-paypal-premium:hover {
+    transform: translateY(-3px);
+}
+
+/* ---VISITAS RECIENTES--- */
+.seccion-visitas {
+    background: var(--color-blanco);
+}
+
+.grid-visitas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    margin-top: 40px;
+}
+
+.flip-circular {
+    background-color: transparent;
+    width: 250px;
+    height: 250px;
+    perspective: 1000px;
+}
+
+.flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform-style: preserve-3d;
+}
+
+.flip-circular:hover .flip-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 50%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    border: 5px solid var(--color-blanco);
+}
+
+.flip-front img,
+.flip-back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.flip-back {
+    transform: rotateY(180deg);
+}
+
+/*Modales lista*/
+.lista-recibos {
+    list-style: none;
+    padding-left: 0;
+}
+
+.lista-recibos li {
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: #444;
+    display: flex;
+    gap: 10px;
+}
+
+.alerta-recibo {
+    background: #fffbeb;
+    border-left: 4px solid #f59e0b;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.alerta-recibo i {
+    color: #f59e0b;
+    font-size: 24px;
+}
+
+/* ---RESPONSIVO--- */
+@media (max-width: 768px) {
+    .titulo-hero-sumate {
+        font-size: 35px;
+    }
+
+    .cubo-contenedor {
+        height: 200px;
+    }
+
+    .frente {
+        transform: rotateX(0deg) translateZ(100px);
+    }
+
+    .arriba {
+        transform: rotateX(90deg) translateZ(100px);
+    }
+
+    .atras {
+        transform: rotateX(180deg) translateZ(100px);
+    }
+
+    .abajo {
+        transform: rotateX(-90deg) translateZ(100px);
+    }
+
+    .post-it-premium {
+        transform: rotate(0);
+    }
+
+    .tarjeta-numero {
+        font-size: 18px;
+    }
+}

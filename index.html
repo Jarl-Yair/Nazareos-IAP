@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nazareos IAP</title>
+    <link rel="icon" href="IMG/Icono.webp">
+    <link rel="stylesheet" href="style.css">
+
+    <!--Tipografía Poppins-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!--Iconos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!--Animaciones AOS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!--Google Analytics (gtag.js)-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6V5BJV51M9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-6V5BJV51M9');
+    </script>
+</head>
+
+<body>
+
+    <!--HEADER-->
+    <header class="header-premium">
+        <div class="nav-container">
+            <a href="#" class="logo-brand">
+                <img src="IMG/B4.webp" alt="Nazareos Logo">
+                <span>NAZAREOS IAP</span>
+            </a>
+
+            <nav class="nav-menu">
+                <a href="#" class="active">Inicio</a>
+                <a href="Quienes.html">¿Quiénes Somos?</a>
+                <a href="Sumate.html">Súmate</a>
+                <a href="#zona-contacto">Contacto</a>
+            </nav>
+
+            <a href="Sumate.html#donacion-paypal" class="btn-donar-premium">
+                Donar <i class="fa-solid fa-heart cora-latido"></i>
+            </a>
+        </div>
+    </header>
+
+    <!--HERO-->
+    <section class="hero-premium" style="background-image: url('IMG/Julio.webp');">
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1200">
+            <span class="hero-badge">Casa Hogar</span>
+            <h1 class="hero-title">Transformando el futuro de los niños.</h1>
+            <p class="hero-subtitle">La mejor opción de formación y desarrollo para niños vulnerables. Un pequeño acto
+                de generosidad puede cambiar su historia.</p>
+
+            <div class="hero-buttons">
+                <a href="sumate.html" class="btn-primario">Quiero Involucrarme</a>
+                <a href="Quienes.html" class="btn-secundario"><i class="fa-solid fa-play"></i> Conoce nuestra labor</a>
+            </div>
+        </div>
+    </section>
+
+    <!--SECCION FAMILIA-->
+    <section id="quienes" class="seccion-familia">
+        <div class="contenedor-premium">
+            <div class="titulo-seccion" data-aos="fade-up">
+                <h2>Nuestra Familia</h2>
+                <p>Gracias por ser parte de nuestra historia y compartir tantas sonrisas.</p>
+            </div>
+
+            <div class="galeria-grid">
+                <div class="galeria-item" data-aos="zoom-in" data-aos-delay="0">
+                    <img src="IMG/G3.webp" alt="G3">
+                </div>
+                <div class="galeria-item" data-aos="zoom-in" data-aos-delay="150">
+                    <img src="IMG/G2.webp" alt="G2">
+                </div>
+                <div class="galeria-item" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="IMG/G1.webp" alt="G1">
+                </div>
+                <div class="galeria-item" data-aos="zoom-in" data-aos-delay="450">
+                    <img src="IMG/G7.webp" alt="G7">
+                </div>
+                <div class="galeria-item" data-aos="zoom-in" data-aos-delay="600">
+                    <img src="IMG/G4.webp" alt="G4">
+                </div>
+                <div class="galeria-item" data-aos="zoom-in" data-aos-delay="600">
+                    <img src="IMG/G6.webp" alt="G6">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--RED DE APOYO-->
+    <section id="sumate" class="seccion-apoyo">
+        <div class="contenedor-premium">
+            <div class="titulo-seccion text-blanco" data-aos="fade-up">
+                <h2>Únete a nuestra red de apoyo</h2>
+                <p>"Si todos contribuimos un poco, podemos lograr mucho"</p>
+            </div>
+
+            <div class="cards-apoyo">
+                <!--Tarjeta 1-->
+                <div class="card-premium" data-aos="fade-right" data-aos-delay="100">
+                    <div class="card-img">
+                        <img src="IMG/Económica.webp" alt="Apoyo Económico">
+                    </div>
+                    <div class="card-body">
+                        <h3>Económicas</h3>
+                        <p>Un pequeño acto de generosidad puede cambiar la humanidad.</p>
+                        <a href="Sumate.html#donacion-paypal" class="btn-outline">Ver opciones de donación</a>
+                    </div>
+                </div>
+
+                <!--Tarjeta 2-->
+                <div class="card-premium" data-aos="fade-left" data-aos-delay="300">
+                    <div class="card-img">
+                        <img src="IMG/Despensa.webp" alt="Despensa y Jarcería">
+                    </div>
+                    <div class="card-body">
+                        <h3>Despensa y Jarcería</h3>
+                        <p>Tripa vacía, donación que da alegría. Ayúdanos con artículos en especie.</p>
+                        <a href="Sumate.html#donacion-paypal" class="btn-outline">Ver lista de necesidades</a>
+                    </div>
+                </div>
+
+                <!--Tarjeta 3-->
+                <div class="card-premium" data-aos="fade-up" data-aos-delay="500">
+                    <div class="card-img">
+                        <img src="IMG/" alt="No encontre la foto XD">
+                    </div>
+                    <div class="card-body">
+                        <h3>Eventos</h3>
+                        <p>Consulta los eventos proximos eventos.</p>
+                        <a href="Sumate.html#donacion-paypal" class="btn-outline">Ver más detalles</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--VOLUNTARIADO-->
+    <section id="voluntariado" class="seccion-voluntariado">
+        <div class="contenedor-premium split-layout">
+            <div class="voluntariado-texto" data-aos="fade-right">
+                <h2>Voluntariado</h2>
+                <p>Imagina el poder que tienes para cambiar vidas, para inspirar sonrisas y brindar esperanza a quienes
+                    enfrentan dificultades. Tu tiempo, tus habilidades y tu corazón generoso pueden marcar una gran
+                    diferencia en comunidades enteras.</p>
+                <p>Ser parte de nuestra familia no es una decisión superficial, sino un compromiso serio que se nutre de
+                    la comprensión y la voluntad de marcar la diferencia.</p>
+                <p class="frase-destacada">¡Juntos podemos construir un mundo mejor, inspírate, actúa y sé parte del
+                    cambio!</p>
+                <a href="Sumate.html#voluntad" class="btn-primario">¡Quiero Involucrarme!</a>
+            </div>
+            <div class="voluntariado-img" data-aos="fade-left" data-aos-delay="200">
+                <img src="IMG/" alt="No encontre la foto x2" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!--MODELO DE FORMACIÓN-->
+    <section id="formacion" class="seccion-programas bg-gris">
+        <div class="contenedor-premium">
+            <div class="titulo-seccion" data-aos="fade-up">
+                <h2>Modelo de formación</h2>
+            </div>
+            <div class="grid-programas">
+                <!-- Tarjeta 1 -->
+                <div class="card-programa pro-azul" data-aos="zoom-in" data-aos-delay="0">
+                    <div class="icon-wrapper"><img src="IMG/book-2.png" alt="Pedagógico" loading="lazy"></div>
+                    <h3>Pedagógico</h3>
+                    <p class="texto-oculto">Fomentamos el nivel de estudio adecuado a la edad de cada niño.</p>
+                </div>
+                <!-- Tarjeta 2 -->
+                <div class="card-programa pro-verde" data-aos="zoom-in" data-aos-delay="150">
+                    <div class="icon-wrapper"><img src="IMG/heartbeat.png" alt="Médico" loading="lazy"></div>
+                    <h3>Médico Nutricional</h3>
+                    <p class="texto-oculto">Promovemos el cuidado de la salud.</p>
+                </div>
+                <!-- Tarjeta 3 -->
+                <div class="card-programa pro-amarillo" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="icon-wrapper"><img src="IMG/ball-volleyball.png" alt="Deportivo" loading="lazy"></div>
+                    <h3>Cultural Deportivo</h3>
+                    <p class="texto-oculto">Fomentamos hábitos saludables para el bienestar.</p>
+                </div>
+                <!-- Tarjeta 4 -->
+                <div class="card-programa pro-naranja" data-aos="zoom-in" data-aos-delay="450">
+                    <div class="icon-wrapper"><img src="IMG/Diseño sin título (24).png" alt="Psicológico"
+                            loading="lazy"></div>
+                    <h3>Psicológico</h3>
+                    <p class="texto-oculto">Otorgamos bienestar emocional, personal y social a través de la terapia.</p>
+                </div>
+                <!-- Tarjeta 5 -->
+                <div class="card-programa pro-rojo" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="icon-wrapper"><img src="IMG/building-church.png" alt="Vocacional" loading="lazy"></div>
+                    <h3>Vocacional</h3>
+                    <p class="texto-oculto">Proporcionamos un apoyo que guíe a cada niño en su proceso de formación.</p>
+                </div>
+            </div>
+            <!--Boton para ir a ¿Quienes somos?-->
+            <div class="text-center" style="margin-top: 50px;" data-aos="fade-up">
+                <a href="Quienes.html#seccionDeFormacion" class="btn-primario">Conoce más sobre nosotros</a>
+            </div>
+        </div>
+    </section>
+
+    <!--AUTORIDADES REGULATORIAS-->
+    <section class="seccion-autoridades">
+        <div class="contenedor-premium text-center">
+            <div class="titulo-seccion" data-aos="fade-up">
+                <h2>Autoridades regulatorias</h2>
+            </div>
+            <div class="entes-grid">
+                <a href="https://difem.edomex.gob.mx/node/199" class="ente-logo" data-aos="flip-left"
+                    aria-label="Sitio web DIF">
+                    <img src="IMG/Dif.webp" alt="DIFEM" loading="lazy">
+                </a>
+                <a href="https://japem.edomex.gob.mx/node/199" class="ente-logo" data-aos="flip-right"
+                    data-aos-delay="200" aria-label="Sitio web JAPEM">
+                    <img src="IMG/jap.webp" alt="JAPEM" loading="lazy">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!--VISITANOS-->
+    <section class="seccion-visitanos-split">
+        <!--Columna Izquierda-->
+        <div class="visitanos-img-col" data-aos="fade-right">
+            <img src="IMG/Casa Hogar recortada.jpg" alt="Instalaciones Casa Hogar Nazareos">
+        </div>
+        
+        <!--Columna Derecha-->
+        <div class="visitanos-content-col" data-aos="fade-left">
+            <h2>¡Visítanos!</h2>
+            <p>¡Prepara tu agenda y anímate a visitar nuestra casa hogar!</p>
+            <p>Aquí podrás planear un sinfín de actividades para compartir momentos inolvidables con los niños.</p>
+            <p>Organiza una deliciosa comida en la que todos se reúnan o tal vez prefieras planificar una convivencia llena de juegos y diversión, donde puedas compartir tu alegría y energía con los pequeños.</p>
+            
+            <!--Boton que abre el modal-->
+            <a href="#" class="btn-borde-blanco abrir-modal" data-modal="modal-escribenos">Reservar una visita</a>
+            
+            <!--Post-it Interactivo-->
+            <div class="post-it-suscripcion mt-4">
+                <div class="cinta-adhesiva"></div>
+                <h3>¿Quieres saber de nosotros?</h3>
+                <h4 class="sub-postit">SUSCRÍBETE</h4>
+                
+                <form action="https://formsubmit.co/contacto@nazareosiap.org" method="POST" class="form-premium">
+                    <input type="text" name="Nombre" placeholder="Ingresa tu nombre" required>
+                    <input type="email" name="Correo" placeholder="Ingresa tu correo" required>
+                    <input type="tel" name="Telefono" placeholder="Ingresa tu teléfono" maxlength="10" required>
+                    <input type="hidden" name="_captcha" value="false"> 
+                    
+                    <button type="submit" class="btn-naranja-pill btn-full">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!--FOOTER-->
+    <footer id="zona-contacto" class="footer-premium">
+        <div class="footer-main">
+            <!--Columna de informacion-->
+            <div class="footer-col">
+                <h4>Nazareos IAP</h4>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="Quienes.html">¿Quiénes somos?</a></li>
+                    <li><a href="Sumate.html">Súmate</a></li>
+                    <li><a href="#zona-contacto">Contáctanos</a></li>
+                </ul>
+            </div>
+
+            <!--Columna de ayuda-->
+            <div class="footer-col">
+                <h4>Ayuda</h4>
+                <ul>
+                    <li><a href="#" class="abrir-modal" data-modal="modal-faq">Preguntas frecuentes</a></li>
+                    <li><a href="#" class="abrir-modal" data-modal="modal-fundador">Carta del fundador</a></li>
+                    <li><a href="#" class="abrir-modal" data-modal="modal-privacidad">Política de Privacidad</a></li>
+                    <li><a href="#" class="abrir-modal" data-modal="modal-transparencia">Transparencia</a></li>
+                </ul>
+            </div>
+
+            <!--Columna de contacto-->
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <ul class="footer-contacto">
+                    <li><a href="#" class="abrir-modal" data-modal="modal-portavoz"
+                            style="color: #555; text-decoration: none;"><i class="fa-solid fa-bullhorn"></i> Porta
+                            voz</a></li>
+                    <li><a href="#" class="abrir-modal" data-modal="modal-ubicacion"
+                            style="color: #555; text-decoration: none;"><i class="fa-solid fa-location-dot"></i>
+                            Ubicación</a></li>
+                    <li><a href="#" class="abrir-modal" data-modal="modal-telefonos"
+                            style="color: #555; text-decoration: none;"><i class="fa-solid fa-phone"></i> Teléfonos</a>
+                    </li>
+                    <li><a href="#" class="abrir-modal" data-modal="modal-correo"
+                            style="color: #555; text-decoration: none;"><i class="fa-solid fa-envelope"></i> Correo</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!--Columna de redes sociales-->
+            <div class="footer-col">
+                <h4>Síguenos</h4>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/nazareosiap/?mibextid=LQQJ4d" target="_blank" class="social-fb"
+                        aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/nazareosiap" target="_blank" class="social-tw" aria-label="Twitter">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 512 512" fill="currentColor">
+                            <path
+                                d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
+                        </svg>
+                    </a>
+                    <a href="https://instagram.com/casahogarnazareos" target="_blank" class="social-ig"
+                        aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <a href="./HTML/Sumate.html#aporta" class="btn-donar-footer">Hazte Donante</a>
+            </div>
+        </div>
+
+        <!--Alianzas-->
+        <div class="footer-alianzas">
+            <a href="https://www.facebook.com/TiendasUrbanCoatings" target="_blank"><img src="IMG/B1.webp"
+                    alt="URBAN"></a>
+            <a href="https://www.facebook.com/CEMSARecubrimientos" target="_blank"><img src="IMG/B2.webp"
+                    alt="CEMSA"></a>
+            <a href="https://www.facebook.com/jarlserv" target="_blank"><img src="IMG/B3.webp" alt="JARL"></a>
+            <a href="https://www.facebook.com/nazareosiap" target="_blank"><img src="IMG/B4.webp"
+                    alt="NAZAREOS IAP"></a>
+            <a href="http://www.cemsamx.com/G.html" target="_blank"><img src="IMG/GC22.webp" alt="GC"></a>
+            <a href="https://www.facebook.com/nazareosac1" target="_blank"><img src="IMG/B5.webp" alt="NAZAREOS AC"></a>
+            <a href="https://www.facebook.com/people/EC-Gens-Solutions/100068549594726/" target="_blank"><img
+                    src="IMG/B6.webp" alt="GENS"></a>
+            <a href="https://www.facebook.com/people/EPP/100088719123320/" target="_blank"><img src="IMG/B7.webp"
+                    alt="EPP"></a>
+            <a href="https://www.facebook.com/KumonSanJuanTultepecEdomex" target="_blank"><img src="IMG/B8.webp"
+                    alt="KUMON"></a>
+        </div>
+
+        <!--Creditos-->
+        <div class="footer-creditos">
+            <p>© Designed by: <b>Ing. Yair Maldonado / Lic. Karen Moreno / Lic. Montserrat Vazquez</b> - <a
+                    href="http://www.jarl.com.mx" target="_blank">JARL 2026</a> - Todos los Derechos Reservados.</p>
+        </div>
+    </footer>
+
+    <!--ZONA DE MODALES-->
+
+    <!--MODAL ESCRIBENOS -->
+    <div id="modal-escribenos" class="modal-ventana">
+        <div class="modal-contenido">
+            <span class="cerrar-modal">&times;</span>
+            <h2 class="titulo-modal text-center mb-4">Escríbenos</h2>
+            
+            <form action="https://formsubmit.co/contacto@nazareosiap.org" method="POST" class="form-premium">
+                <input type="text" name="Nombre" placeholder="Nombre Completo" required>
+                <input type="tel" name="Telefono" placeholder="Número Telefónico" required maxlength="10">
+                <input type="email" name="Correo" placeholder="Correo Electrónico" required>
+                
+                <select name="Asunto" required>
+                    <option value="" disabled selected>Selecciona un asunto...</option>
+                    <option value="Visita">Visita</option>
+                    <option value="Voluntariado">Voluntariado</option>
+                    <option value="Donaciones">Donaciones</option>
+                    <option value="Servicio">Servicio Social</option>
+                    <option value="Formador">Ser Colaborador</option>
+                </select>
+                
+                <input type="text" name="Texto" placeholder="Comentario y/o Asunto diferente" required>
+                <input type="hidden" name="_captcha" value="false">
+                
+                <button type="submit" class="btn-naranja-pill btn-full mt-3">Enviar Mensaje</button>
+            </form>
+        </div>
+    </div>
+
+    <!--Modal porta voz-->
+    <div id="modal-portavoz" class="modal-ventana">
+        <div class="modal-contenido text-center">
+            <span class="cerrar-modal">&times;</span>
+            <h2 class="titulo-modal">Porta voz</h2>
+            <h3 class="pregunta-modal text-center">Acción social</h3>
+
+            <div class="portavoz-img-container">
+                <img src="./IMG/Juanca.webp" alt="Juanca, Porta voz">
+            </div>
+
+            <a href="https://api.whatsapp.com/send?phone=5618678811&text=Buen dia,%20quisiera%20recibir%20mas%20información%20por%20favor%20👋"
+                target="_blank" class="btn-naranja-pill btn-whatsapp-verde">
+                Envíame un mensaje
+            </a>
+        </div>
+    </div>
+
+    <!--Modal Ubicacion-->
+    <div id="modal-ubicacion" class="modal-ventana">
+        <div class="modal-contenido">
+            <span class="cerrar-modal">&times;</span>
+            <h2 class="titulo-modal">Ubicación</h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3757.5068591806644!2d-99.12682702490869!3d19.648369781677673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f44031d42fef%3A0x385d8bf8e2c25cb9!2sCasa%20Hogar%20Nazareos%20IAP!5e0!3m2!1ses!2smx!4v1682101012405!5m2!1ses!2smx"
+                width="100%" height="350"
+                style="border-radius:16px; border:none; box-shadow: 0 10px 20px rgba(0,0,0,0.1);" allowfullscreen=""
+                loading="fast" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+    <!--Modal telefonos-->
+    <div id="modal-telefonos" class="modal-ventana">
+        <div class="modal-contenido text-center">
+            <span class="cerrar-modal">&times;</span>
+            <h2 class="titulo-modal">Teléfonos</h2>
+
+            <div class="contenedor-botones-contacto">
+                <a href="https://api.whatsapp.com/send?phone=5618678811" target="_blank"
+                    class="btn-contacto premium-wa">
+                    <div class="icono-circular"><i class="fa-brands fa-whatsapp"></i></div>
+                    <span>56 18678811</span>
+                </a>
+                <a href="tel:5572468530" class="btn-contacto premium-tel">
+                    <div class="icono-circular"><i class="fa-solid fa-phone"></i></div>
+                    <span>55 72468530</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal Correos-->
+    <div id="modal-correo" class="modal-ventana">
+        <div class="modal-contenido text-center">
+            <span class="cerrar-modal">&times;</span>
+            <h2 class="titulo-modal">Correos</h2>
+
+            <div class="contenedor-botones-contacto">
+                <a href="mailto:contacto@nazareosiap.org" class="btn-contacto premium-mail-1">
+                    <div class="icono-circular"><i class="fa-solid fa-envelope"></i></div>
+                    <span>contacto@nazareosiap.org</span>
+                </a>
+                <a href="mailto:carlos.ugalde@nazareosiap.org" class="btn-contacto premium-mail-2">
+                    <div class="icono-circular"><i class="fa-solid fa-envelope"></i></div>
+                    <span>carlos.ugalde@nazareosiap.org</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal FAQ-->
+    <div id="modal-faq" class="modal-ventana">
+        <div class="modal-contenido">
+            <span class="cerrar-modal">&times;</span>
+            <h2 class="titulo-modal">Preguntas frecuentes</h2>
+
+            <h3 class="pregunta-modal">¿Cuántos años debo tener para visitarlos?</h3>
+            <p class="respuesta-modal">La edad no es un impedimento, eres bienvenido. Si eres menor de edad, requerimos
+                el acompañamiento de un adulto.</p>
+
+            <h3 class="pregunta-modal">¿Cuántas personas pueden acudir a la visita?</h3>
+            <p class="respuesta-modal">¡Todos son bienvenidos a participar! Comunica en tu cita cuantas personas
+                asistirán.</p>
+
+            <h3 class="pregunta-modal">¿Cuánto tiempo debemos tener disponible para hacer voluntariado?</h3>
+            <p class="respuesta-modal">Todo tipo de voluntariado tiene una duración de 6 meses, sin embargo,
+                consideramos tus horarios disponibles para que puedas pasar tiempo con nuestros pequeños.</p>
+        </div>
+    </div>
+
+    <!--Modal fundador-->
+    <div id="modal-fundador" class="modal-ventana">
+        <div class="modal-contenido modal-carta">
+            <span class="cerrar-modal">&times;</span>
+            <img src="IMG/Reporte de transparencia.webp" alt="Carta del Fundador"
+                style="width: 100%; display: block; border-radius: 5px;">
+        </div>
+    </div>
+
+    <!--Modal privacidad-->
+    <div id="modal-privacidad" class="modal-ventana">
+        <div class="modal-contenido text-center">
+            <span class="cerrar-modal">&times;</span>
+            <h2 class="titulo-modal">Política de privacidad</h2>
+            <p class="respuesta-modal text-center">Nuestro sitio web puede contener enlaces a otros sitios web de
+                terceros que no están bajo nuestro control. No nos hacemos responsables de las prácticas de privacidad o
+                el contenido de estos sitios web.</p>
+
+            <div style="margin-top: 30px;">
+                <a href="MEDIA/Aviso de privacidad CH.pdf" target="_blank" class="btn-naranja-pill">Descargar</a>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal transparencia-->
+    <div id="modal-transparencia" class="modal-ventana">
+        <div class="modal-contenido">
+            <span class="cerrar-modal">&times;</span>
+            <h2 class="titulo-modal">Transparencia</h2>
+            <p class="respuesta-modal">Somos un libro abierto. Creemos que tienes derecho a ver cómo estamos utilizando
+                los recursos que nos confías. Si deseas ver nuestro Informe Anual, envíanos un comentario a este
+                formulario:</p>
+
+            <form action="https://formsubmit.co/contacto@nazareosiap.org" method="POST" class="formulario-original">
+                <input name="Nombre" placeholder="Nombre Completo" type="text" required>
+                <input name="Telefono" placeholder="Numero Telefonico" required maxlength="10">
+                <input name="Correo" placeholder="Correo Electronico" type="email" required>
+                <select name="Asunto">
+                    <option value="Transparencia">Informe de Transparencia</option>
+                </select>
+                <button type="submit" class="btn-naranja-pill btn-enviar-form">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <!--SCRIPTS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Iniciar animaciones de scroll
+        AOS.init({
+            once: false,
+            offset: 100
+        });
+
+        // Hacer el header transparente al bajar
+        window.addEventListener("scroll", function () {
+            let header = document.querySelector(".header-premium");
+            header.classList.toggle("sticky", window.scrollY > 50);
+        });
+
+        // EFECTO DESPLEGABLE MODELO DE FORMACION
+        const tarjetasFormacion = document.querySelectorAll('.card-programa');
+
+        tarjetasFormacion.forEach(tarjeta => {
+            tarjeta.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                // 1. Busca todas las tarjetas y las cierrra
+                tarjetasFormacion.forEach(t => {
+                    if (t !== this) {
+                        t.classList.remove('activa');
+                    }
+                });
+
+                // 2. Abre o cierra solo a la que se le da clic
+                this.classList.toggle('activa');
+            });
+        });
+
+        // SCRIPT PARA ABRIR Y CERRAR MODALES
+        document.addEventListener("DOMContentLoaded", () => {
+            const botonesAbrir = document.querySelectorAll('.abrir-modal');
+            const botonesCerrar = document.querySelectorAll('.cerrar-modal');
+            const modales = document.querySelectorAll('.modal-ventana');
+
+            // Abre el modal y no hace el salto arriba
+            botonesAbrir.forEach(boton => {
+                boton.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const modalId = boton.getAttribute('data-modal');
+                    const modal = document.getElementById(modalId);
+                    if (modal) {
+                        modal.classList.add('activo');
+                        document.body.style.overflow = 'hidden';
+                    }
+                });
+            });
+
+            // Cierra el modal desde la X
+            botonesCerrar.forEach(boton => {
+                boton.addEventListener('click', () => {
+                    const modal = boton.closest('.modal-ventana');
+                    if (modal) {
+                        modal.classList.remove('activo');
+                        document.body.style.overflow = 'auto';
+                    }
+                });
+            });
+
+            // Cierra el modal dando clic afuera de la caja
+            window.addEventListener('click', (e) => {
+                modales.forEach(modal => {
+                    if (e.target === modal) {
+                        modal.classList.remove('activo');
+                        document.body.style.overflow = 'auto';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
