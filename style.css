@@ -584,7 +584,7 @@ body {
 
 .visitanos-content-col {
     flex: 1 1 50%;
-    background-color: #3aafc7; 
+    background-color: #3aafc7;
     color: var(--color-blanco);
     padding: 60px 8%;
     display: flex;
@@ -631,7 +631,7 @@ body {
     padding: 40px 30px 30px;
     border-radius: 5px 25px 5px 25px;
     position: relative;
-    box-shadow: 5px 15px 30px rgba(0,0,0,0.15);
+    box-shadow: 5px 15px 30px rgba(0, 0, 0, 0.15);
     transform: rotate(2deg);
     width: 100%;
     max-width: 400px;
@@ -640,7 +640,7 @@ body {
 }
 
 .post-it-suscripcion:hover {
-    transform: rotate(0deg) scale(1.02); 
+    transform: rotate(0deg) scale(1.02);
 }
 
 .post-it-suscripcion .cinta-adhesiva {
@@ -650,16 +650,26 @@ body {
     transform: translateX(-50%) rotate(-2deg);
     width: 120px;
     height: 35px;
-    background: rgba(255,255,255,0.6);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-.post-it-suscripcion h3 { font-size: 22px; margin-bottom: 5px; }
-.sub-postit { font-weight: 800; font-size: 20px; letter-spacing: 3px; margin-bottom: 20px; color: var(--color-primario); }
+.post-it-suscripcion h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.sub-postit {
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    color: var(--color-primario);
+}
 
 /* ---FORMULARIOS--- */
-.form-premium input, 
-.form-premium select, 
+.form-premium input,
+.form-premium select,
 .form-premium textarea {
     width: 100%;
     padding: 12px 20px;
@@ -674,8 +684,8 @@ body {
     box-sizing: border-box;
 }
 
-.form-premium input:focus, 
-.form-premium select:focus, 
+.form-premium input:focus,
+.form-premium select:focus,
 .form-premium textarea:focus {
     border-color: #3aafc7;
     outline: none;
@@ -683,16 +693,41 @@ body {
     background: var(--color-blanco);
 }
 
-.btn-full { width: 100%; padding: 12px; font-size: 16px; border: none; cursor: pointer; }
-.mt-3 { margin-top: 15px; }
-.mt-4 { margin-top: 30px; }
-.mb-4 { margin-bottom: 25px; }
+.btn-full {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.mt-3 {
+    margin-top: 15px;
+}
+
+.mt-4 {
+    margin-top: 30px;
+}
+
+.mb-4 {
+    margin-bottom: 25px;
+}
 
 /* Responsivo para la pantalla dividida */
 @media (max-width: 900px) {
-    .visitanos-img-col, .visitanos-content-col { flex: 1 1 100%; }
-    .visitanos-img-col { min-height: 300px; }
-    .visitanos-content-col { padding: 40px 5%; }
+
+    .visitanos-img-col,
+    .visitanos-content-col {
+        flex: 1 1 100%;
+    }
+
+    .visitanos-img-col {
+        min-height: 300px;
+    }
+
+    .visitanos-content-col {
+        padding: 40px 5%;
+    }
 }
 
 
@@ -1205,7 +1240,7 @@ body {
     }
 }
 
-/* RESPONSIVIDAD Y MENÚ HAMBURGUESA  */
+/*RESPONSIVE DESIGN*/
 .menu-toggle {
     display: none;
 }
@@ -1216,13 +1251,17 @@ body {
 
 @media (max-width: 950px) {
 
-    /* --- HEADER Y NAVEGACIÓN --- */
+    /* --- Header & Navbar --- */
     .menu-toggle {
         display: block;
         font-size: 30px;
-        color: var(--color-oscuro);
+        color: var(--color-blanco);
         cursor: pointer;
-        z-index: 1000;
+        z-index: 1002;
+    }
+
+    .header-premium.sticky .menu-toggle {
+        color: var(--color-oscuro);
     }
 
     .btn-donar-premium {
@@ -1241,77 +1280,134 @@ body {
         padding: 40px 0;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         transition: left 0.4s ease;
-        gap: 25px;
+        gap: 20px;
+        z-index: 1000;
     }
 
-    /* Clase que se activa con Javascript */
     .nav-menu.activo {
         left: 0;
     }
 
     .nav-menu a {
-        font-size: 20px;
+        color: var(--color-oscuro);
+        font-size: 18px;
         width: 100%;
         text-align: center;
     }
 
     .btn-donar-movil {
         display: inline-block;
-        background: var(--color-secundario);
+        background: var(--color-primario) !important;
         color: var(--color-blanco) !important;
-        padding: 10px 30px;
+        padding: 12px 30px;
         border-radius: 50px;
         margin-top: 10px;
+        width: auto !important;
     }
 
-    /* --- AJUSTES DE ESTRUCTURA GENERAL --- */
-    .grid-2-col,
-    .grid-3-col,
-    .grid-donacion,
-    .seccion-visitanos-split {
-        grid-template-columns: 1fr !important;
-        flex-direction: column !important;
+    /* --- Hero --- */
+    .hero-premium {
+        background-attachment: scroll;
     }
 
-    .visitanos-img-col {
-        min-height: 250px;
+    /* Quita el fixed en móvil para que no trabe la pantalla */
+    .hero-title {
+        font-size: 40px;
+        margin-top: 30px;
     }
 
-    .visitanos-content-col {
-        padding: 40px 20px;
+    .hero-subtitle {
+        font-size: 16px;
     }
 
-    .post-it-suscripcion,
-    .post-it-interactivo,
-    .post-it-premium {
-        transform: rotate(0deg) !important;
-        max-width: 100%;
-        padding: 30px 20px;
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
     }
 
-    .cinta-adhesiva {
-        transform: translateX(-50%) rotate(0deg) !important;
+    .btn-primario,
+    .btn-secundario {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
     }
 
-    /* Fuentes más pequeñas */
-    h1,
-    .titulo-hero-sumate {
-        font-size: 35px !important;
+    /* --- Secciones Generales --- */
+    .contenedor-premium {
+        padding: 50px 20px;
     }
 
-    h2,
-    .visitanos-content-col h2 {
-        font-size: 30px !important;
+    .titulo-seccion h2 {
+        font-size: 30px;
     }
 
-    /* Footer */
-    .footer-main {
+    /* --- Voluntariado (Split Layout) --- */
+    .split-layout {
         flex-direction: column;
         text-align: center;
     }
 
-    .footer-col h4::before {
+    .voluntariado-texto {
+        text-align: center;
+    }
+
+    /* --- Visítanos (Split Layout) --- */
+    .seccion-visitanos-split {
+        flex-direction: column;
+    }
+
+    .visitanos-img-col {
+        flex: 1 1 100%;
+        min-height: 250px;
+    }
+
+    .visitanos-content-col {
+        flex: 1 1 100%;
+        padding: 50px 20px;
+    }
+
+    /* --- Post-it responsivo --- */
+    .post-it-suscripcion {
+        transform: rotate(0deg);
+        /* Lo enderezamos para que no desborde la pantalla */
+        max-width: 100%;
+        padding: 30px 20px;
+    }
+
+    .post-it-suscripcion .cinta-adhesiva {
+        transform: translateX(-50%) rotate(0deg);
+    }
+
+    /* --- Grids (Galería y Tarjetas) --- */
+    .galeria-grid,
+    .cards-apoyo,
+    .grid-programas {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria-item {
+        height: 250px;
+        max-width: 100%;
+    }
+
+    /* --- Footer --- */
+    .footer-main {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .footer-col h4::after {
         left: 50%;
         transform: translateX(-50%);
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    .footer-alianzas img {
+        width: 60px;
+        height: 60px;
     }
 }
