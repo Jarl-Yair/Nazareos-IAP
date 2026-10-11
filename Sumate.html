@@ -32,13 +32,21 @@
                 <img src="IMG/B4.webp" alt="Nazareos Logo">
                 <span>NAZAREOS IAP</span>
             </a>
-            <nav class="nav-menu">
+
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <nav class="nav-menu" id="nav-menu">
                 <a href="index.html">Inicio</a>
                 <a href="Quienes.html">¿Quiénes Somos?</a>
-                <a href="#" class="active">Súmate</a>
+                <a href="Sumate.html">Súmate</a>
                 <a href="index.html#zona-contacto">Contacto</a>
+                <a href="Sumate.html#donacion-paypal" class="btn-donar-movil">Donar <i
+                        class="fa-solid fa-heart"></i></a>
             </nav>
-            <a href="#donacion-paypal" class="btn-donar-premium">
+
+            <a href="Sumate.html#donacion-paypal" class="btn-donar-premium">
                 Donar <i class="fa-solid fa-heart cora-latido"></i>
             </a>
         </div>
@@ -539,6 +547,28 @@
                         document.body.style.overflow = 'auto';
                     }
                 });
+            });
+
+            // MENÚ HAMBURGUESA (MOBILE)
+            document.addEventListener("DOMContentLoaded", () => {
+                const menuToggle = document.getElementById('mobile-menu');
+                const navMenu = document.getElementById('nav-menu');
+
+                if (menuToggle && navMenu) {
+                    menuToggle.addEventListener('click', () => {
+                        navMenu.classList.toggle('activo');
+
+                        // Cambiar icono de Hamburguesa (Barras) a una 'X'
+                        const icono = menuToggle.querySelector('i');
+                        if (navMenu.classList.contains('activo')) {
+                            icono.classList.remove('fa-bars');
+                            icono.classList.add('fa-xmark');
+                        } else {
+                            icono.classList.remove('fa-xmark');
+                            icono.classList.add('fa-bars');
+                        }
+                    });
+                }
             });
         });
 

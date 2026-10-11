@@ -1204,3 +1204,114 @@ body {
         min-height: 500px;
     }
 }
+
+/* RESPONSIVIDAD Y MENÚ HAMBURGUESA  */
+.menu-toggle {
+    display: none;
+}
+
+.btn-donar-movil {
+    display: none;
+}
+
+@media (max-width: 950px) {
+
+    /* --- HEADER Y NAVEGACIÓN --- */
+    .menu-toggle {
+        display: block;
+        font-size: 30px;
+        color: var(--color-oscuro);
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    .btn-donar-premium {
+        display: none;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 0;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        transition: left 0.4s ease;
+        gap: 25px;
+    }
+
+    /* Clase que se activa con Javascript */
+    .nav-menu.activo {
+        left: 0;
+    }
+
+    .nav-menu a {
+        font-size: 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .btn-donar-movil {
+        display: inline-block;
+        background: var(--color-secundario);
+        color: var(--color-blanco) !important;
+        padding: 10px 30px;
+        border-radius: 50px;
+        margin-top: 10px;
+    }
+
+    /* --- AJUSTES DE ESTRUCTURA GENERAL --- */
+    .grid-2-col,
+    .grid-3-col,
+    .grid-donacion,
+    .seccion-visitanos-split {
+        grid-template-columns: 1fr !important;
+        flex-direction: column !important;
+    }
+
+    .visitanos-img-col {
+        min-height: 250px;
+    }
+
+    .visitanos-content-col {
+        padding: 40px 20px;
+    }
+
+    .post-it-suscripcion,
+    .post-it-interactivo,
+    .post-it-premium {
+        transform: rotate(0deg) !important;
+        max-width: 100%;
+        padding: 30px 20px;
+    }
+
+    .cinta-adhesiva {
+        transform: translateX(-50%) rotate(0deg) !important;
+    }
+
+    /* Fuentes más pequeñas */
+    h1,
+    .titulo-hero-sumate {
+        font-size: 35px !important;
+    }
+
+    h2,
+    .visitanos-content-col h2 {
+        font-size: 30px !important;
+    }
+
+    /* Footer */
+    .footer-main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-col h4::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

@@ -30,16 +30,22 @@
     <!--HEADER-->
     <header class="header-premium">
         <div class="nav-container">
-            <a href="#" class="logo-brand">
+            <a href="index.html" class="logo-brand">
                 <img src="IMG/B4.webp" alt="Nazareos Logo">
                 <span>NAZAREOS IAP</span>
             </a>
 
-            <nav class="nav-menu">
-                <a href="#" class="active">Inicio</a>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <nav class="nav-menu" id="nav-menu">
+                <a href="index.html">Inicio</a>
                 <a href="Quienes.html">¿Quiénes Somos?</a>
                 <a href="Sumate.html">Súmate</a>
                 <a href="#zona-contacto">Contacto</a>
+                <a href="Sumate.html#donacion-paypal" class="btn-donar-movil">Donar <i
+                        class="fa-solid fa-heart"></i></a>
             </nav>
 
             <a href="Sumate.html#donacion-paypal" class="btn-donar-premium">
@@ -235,29 +241,30 @@
         <div class="visitanos-img-col" data-aos="fade-right">
             <img src="IMG/Casa Hogar recortada.jpg" alt="Instalaciones Casa Hogar Nazareos">
         </div>
-        
+
         <!--Columna Derecha-->
         <div class="visitanos-content-col" data-aos="fade-left">
             <h2>¡Visítanos!</h2>
             <p>¡Prepara tu agenda y anímate a visitar nuestra casa hogar!</p>
             <p>Aquí podrás planear un sinfín de actividades para compartir momentos inolvidables con los niños.</p>
-            <p>Organiza una deliciosa comida en la que todos se reúnan o tal vez prefieras planificar una convivencia llena de juegos y diversión, donde puedas compartir tu alegría y energía con los pequeños.</p>
-            
+            <p>Organiza una deliciosa comida en la que todos se reúnan o tal vez prefieras planificar una convivencia
+                llena de juegos y diversión, donde puedas compartir tu alegría y energía con los pequeños.</p>
+
             <!--Boton que abre el modal-->
             <a href="#" class="btn-borde-blanco abrir-modal" data-modal="modal-escribenos">Reservar una visita</a>
-            
+
             <!--Post-it Interactivo-->
             <div class="post-it-suscripcion mt-4">
                 <div class="cinta-adhesiva"></div>
                 <h3>¿Quieres saber de nosotros?</h3>
                 <h4 class="sub-postit">SUSCRÍBETE</h4>
-                
+
                 <form action="https://formsubmit.co/contacto@nazareosiap.org" method="POST" class="form-premium">
                     <input type="text" name="Nombre" placeholder="Ingresa tu nombre" required>
                     <input type="email" name="Correo" placeholder="Ingresa tu correo" required>
                     <input type="tel" name="Telefono" placeholder="Ingresa tu teléfono" maxlength="10" required>
-                    <input type="hidden" name="_captcha" value="false"> 
-                    
+                    <input type="hidden" name="_captcha" value="false">
+
                     <button type="submit" class="btn-naranja-pill btn-full">Enviar</button>
                 </form>
             </div>
@@ -265,7 +272,7 @@
     </section>
 
     <!--FOOTER-->
-    <footer  class="footer-premium">
+    <footer class="footer-premium">
         <div class="footer-main">
             <!--Columna de informacion-->
             <div class="footer-col">
@@ -360,12 +367,12 @@
         <div class="modal-contenido">
             <span class="cerrar-modal">&times;</span>
             <h2 class="titulo-modal text-center mb-4">Escríbenos</h2>
-            
+
             <form action="https://formsubmit.co/contacto@nazareosiap.org" method="POST" class="form-premium">
                 <input type="text" name="Nombre" placeholder="Nombre Completo" required>
                 <input type="tel" name="Telefono" placeholder="Número Telefónico" required maxlength="10">
                 <input type="email" name="Correo" placeholder="Correo Electrónico" required>
-                
+
                 <select name="Asunto" required>
                     <option value="" disabled selected>Selecciona un asunto...</option>
                     <option value="Visita">Visita</option>
@@ -374,10 +381,10 @@
                     <option value="Servicio">Servicio Social</option>
                     <option value="Formador">Ser Colaborador</option>
                 </select>
-                
+
                 <input type="text" name="Texto" placeholder="Comentario y/o Asunto diferente" required>
                 <input type="hidden" name="_captcha" value="false">
-                
+
                 <button type="submit" class="btn-naranja-pill btn-full mt-3">Enviar Mensaje</button>
             </form>
         </div>
@@ -590,6 +597,28 @@
                         document.body.style.overflow = 'auto';
                     }
                 });
+            });
+
+            // MENÚ HAMBURGUESA (MOBILE)
+            document.addEventListener("DOMContentLoaded", () => {
+                const menuToggle = document.getElementById('mobile-menu');
+                const navMenu = document.getElementById('nav-menu');
+
+                if (menuToggle && navMenu) {
+                    menuToggle.addEventListener('click', () => {
+                        navMenu.classList.toggle('activo');
+
+                        // Cambiar icono de Hamburguesa (Barras) a una 'X'
+                        const icono = menuToggle.querySelector('i');
+                        if (navMenu.classList.contains('activo')) {
+                            icono.classList.remove('fa-bars');
+                            icono.classList.add('fa-xmark');
+                        } else {
+                            icono.classList.remove('fa-xmark');
+                            icono.classList.add('fa-bars');
+                        }
+                    });
+                }
             });
         });
     </script>
