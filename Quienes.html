@@ -775,69 +775,63 @@
             header.classList.toggle("sticky", window.scrollY > 50);
         });
 
-        // SCRIPT PARA ABRIR Y CERRAR MODALES
+        // ==========================================
+        // EVENTOS DEL DOM (Modales y Hamburguesa)
+        // ==========================================
         document.addEventListener("DOMContentLoaded", () => {
             const botonesAbrir = document.querySelectorAll('.abrir-modal');
             const botonesCerrar = document.querySelectorAll('.cerrar-modal');
             const modales = document.querySelectorAll('.modal-ventana');
 
-            // Abre el modal y no hace el salto arriba
             botonesAbrir.forEach(boton => {
                 boton.addEventListener('click', (e) => {
                     e.preventDefault();
                     const modalId = boton.getAttribute('data-modal');
                     const modal = document.getElementById(modalId);
-                    if (modal) {
-                        modal.classList.add('activo');
-                        document.body.style.overflow = 'hidden';
-                    }
+                    if (modal) { modal.classList.add('activo'); document.body.style.overflow = 'hidden'; }
                 });
             });
 
-            // Cierra el modal desde la X
             botonesCerrar.forEach(boton => {
                 boton.addEventListener('click', () => {
                     const modal = boton.closest('.modal-ventana');
-                    if (modal) {
-                        modal.classList.remove('activo');
-                        document.body.style.overflow = 'auto';
-                    }
+                    if (modal) { modal.classList.remove('activo'); document.body.style.overflow = 'auto'; }
                 });
             });
 
-            // Cierra el modal dando clic afuera de la caja
             window.addEventListener('click', (e) => {
                 modales.forEach(modal => {
-                    if (e.target === modal) {
-                        modal.classList.remove('activo');
-                        document.body.style.overflow = 'auto';
-                    }
+                    if (e.target === modal) { modal.classList.remove('activo'); document.body.style.overflow = 'auto'; }
                 });
             });
 
-            // MENÚ HAMBURGUESA (MOBILE)
-            document.addEventListener("DOMContentLoaded", () => {
-                const menuToggle = document.getElementById('mobile-menu');
-                const navMenu = document.getElementById('nav-menu');
+            // MENÚ HAMBURGUESA
+            const menuToggle = document.getElementById('mobile-menu');
+            const navMenu = document.getElementById('nav-menu');
+            const linksMenu = navMenu ? navMenu.querySelectorAll('a') : [];
 
-                if (menuToggle && navMenu) {
-                    menuToggle.addEventListener('click', () => {
-                        navMenu.classList.toggle('activo');
+            if (menuToggle && navMenu) {
+                menuToggle.addEventListener('click', () => {
+                    navMenu.classList.toggle('activo');
+                    const icono = menuToggle.querySelector('i');
+                    if (navMenu.classList.contains('activo')) {
+                        icono.classList.replace('fa-bars', 'fa-xmark');
+                    } else {
+                        icono.classList.replace('fa-xmark', 'fa-bars');
+                    }
+                });
 
-                        // Cambiar icono de Hamburguesa (Barras) a una 'X'
+                linksMenu.forEach(link => {
+                    link.addEventListener('click', () => {
+                        navMenu.classList.remove('activo');
                         const icono = menuToggle.querySelector('i');
-                        if (navMenu.classList.contains('activo')) {
-                            icono.classList.remove('fa-bars');
-                            icono.classList.add('fa-xmark');
-                        } else {
-                            icono.classList.remove('fa-xmark');
-                            icono.classList.add('fa-bars');
-                        }
+                        if (icono) icono.classList.replace('fa-xmark', 'fa-bars');
                     });
-                }
-            });
+                });
+            }
         });
     </script>
+
 
 </body>
 
