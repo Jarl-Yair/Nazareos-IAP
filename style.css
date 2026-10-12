@@ -277,7 +277,7 @@ body {
 
 .text-blanco h2,
 .text-blanco p {
-    color: var(--color-blanco);
+    color: var(--color-oscuro);
 }
 
 /*GALERIA*/
@@ -315,7 +315,6 @@ body {
 
 /*RED DE APOYO*/
 .seccion-apoyo {
-    background: linear-gradient(135deg, var(--color-secundario) 0%, #1d7c92 100%);
     position: relative;
 }
 
@@ -850,35 +849,102 @@ body {
     transform: translateY(-3px);
 }
 
-/* Alianzas */
-.footer-alianzas {
-    background-color: #fcfcfc;
-    padding: 40px 20px;
+/* ESTILO DE LOS GLOBOS */
+.alianzas-col {
+    text-align: center;
+}
+
+.red-alianzas {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.alianzas-fila-superior {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 30px;
-    border-top: 1px solid #eaeaea;
 }
 
-.footer-alianzas img {
-    width: 80px;
-    height: 80px;
+.alianzas-bloque {
+    display: flex;
+    gap: 20px;
+}
+
+.alianzas-fila-inferior {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.alianza-logo {
+    display: inline-block;
     border-radius: 50%;
-    object-fit: contain;
-    background-color: var(--color-blanco);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-    filter: grayscale(100%);
-    opacity: 0.6;
-    transition: all 0.4s ease;
+    overflow: hidden;
+    background-color: #fff;
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.footer-alianzas img:hover {
-    filter: grayscale(0%);
-    opacity: 1;
-    transform: translateY(-8px) scale(1.1);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+.alianza-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 10px;
+}
+
+.alianza-logo:hover {
+    transform: scale(1.15);
+    z-index: 10;
+}
+
+.alianza-principal {
+    width: 110px;
+    height: 110px;
+}
+
+.alianza-logo:not(.alianza-principal) {
+    width: 65px;
+    height: 65px;
+}
+
+.glow-rojo {
+    box-shadow: 0 0 20px rgba(255, 50, 50, 0.7);
+}
+
+.glow-azul {
+    box-shadow: 0 0 20px rgba(54, 94, 168, 0.8);
+}
+
+.glow-blanco {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+.glow-gris {
+    box-shadow: 0 0 30px rgba(200, 200, 200, 0.8);
+}
+
+.glow-naranja {
+    box-shadow: 0 0 20px rgba(255, 140, 0, 0.8);
+}
+
+.glow-rosa {
+    box-shadow: 0 0 20px rgba(255, 20, 147, 0.7);
+}
+
+.glow-verde {
+    box-shadow: 0 0 20px rgba(50, 205, 50, 0.7);
+}
+
+.glow-celeste {
+    box-shadow: 0 0 20px rgba(135, 206, 235, 0.8);
+}
+
+.glow-cian {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.7);
 }
 
 .footer-creditos {
@@ -1508,67 +1574,105 @@ body {
     }
 }
 
-/* ESTILO CEMSA PARA ALIANZAS EN FON  */
-.footer-alianzas a:nth-child(1) img {
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
-}
-
-.footer-alianzas a:nth-child(2) img {
-    box-shadow: 0 0 20px rgba(0, 64, 255, 0.6);
-}
-
-.footer-alianzas a:nth-child(3) img {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-}
-
-.footer-alianzas a:nth-child(4) img {
-    box-shadow: 0 0 20px rgba(244, 157, 57, 0.6);
-}
-
-.footer-alianzas a:nth-child(5) img {
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
-}
-
-.footer-alianzas a:nth-child(6) img {
-    box-shadow: 0 0 20px rgba(251, 0, 255, 0.4);
-}
-
-.footer-alianzas a:nth-child(7) img {
-    box-shadow: 0 0 20px rgba(127, 181, 61, 0.6);
-}
-
-.footer-alianzas a:nth-child(8) img {
-    box-shadow: 0 0 20px rgba(0, 255, 30, 0.4);
-}
-
-.footer-alianzas a:nth-child(9) img {
-    box-shadow: 0 0 20px rgba(9, 230, 255, 0.6);
-}
-
 @media (max-width: 768px) {
-    .footer-alianzas {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 15px;
-        justify-items: center;
-        align-items: center;
-        padding: 40px 10px;
+
+    /* ESTILO DE LOS GLOBOS */
+    .alianzas-col {
+        text-align: center;
     }
 
-    .footer-alianzas img {
+    .red-alianzas {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+
+    .alianzas-fila-superior {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .alianzas-bloque {
+        display: flex;
+        gap: 20px;
+    }
+
+    .alianzas-fila-inferior {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .alianza-logo {
+        display: inline-block;
+        border-radius: 50%;
+        overflow: hidden;
+        background-color: #fff;
+        transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .alianza-logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        padding: 10px;
+    }
+
+    .alianza-logo:hover {
+        transform: scale(1.15);
+        z-index: 10;
+    }
+
+    .alianza-principal {
+        width: 110px;
+        height: 110px;
+    }
+
+    .alianza-logo:not(.alianza-principal) {
         width: 65px;
         height: 65px;
-        filter: grayscale(0%);
-        opacity: 1;
     }
 
-    .footer-alianzas a:nth-child(5) {
-        grid-column: 1 / -1;
-        margin: 20px 0;
+    /* ESTILO CEMSA PARA ALIANZAS EN FON  */
+    .glow-rojo {
+        box-shadow: 0 0 20px rgba(255, 50, 50, 0.7);
     }
 
-    .footer-alianzas a:nth-child(5) img {
-        width: 120px;
-        height: 120px;
+    .glow-azul {
+        box-shadow: 0 0 20px rgba(54, 94, 168, 0.8);
     }
+
+    .glow-blanco {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    }
+
+    .glow-gris {
+        box-shadow: 0 0 30px rgba(200, 200, 200, 0.8);
+    }
+
+    .glow-naranja {
+        box-shadow: 0 0 20px rgba(255, 140, 0, 0.8);
+    }
+
+    .glow-rosa {
+        box-shadow: 0 0 20px rgba(255, 20, 147, 0.7);
+    }
+
+    .glow-verde {
+        box-shadow: 0 0 20px rgba(50, 205, 50, 0.7);
+    }
+
+    .glow-celeste {
+        box-shadow: 0 0 20px rgba(135, 206, 235, 0.8);
+    }
+
+    .glow-cian {
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.7);
+    }
+
 }
