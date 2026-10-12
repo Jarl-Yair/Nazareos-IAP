@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>  
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Súmate - Nazareos IAP</title>
@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="Sumate.css">
 
-    <!--Tipografía Poppins Optimizada-->
+    <!--Tipografia Poppins Optimizada-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <!--Google Analytics (gtag.js)-->
+    <!--Google Analytics-->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6V5BJV51M9"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -33,7 +33,7 @@
     <header class="header-premium">
         <div class="nav-container">
             <a href="index.html" class="logo-brand">
-                <img src="IMG/B4.webp" alt="Nazareos Logo">
+                <img src="IMG/B4.webp" alt="Nazareos Logo" width="45" height="45">
                 <span>NAZAREOS IAP</span>
             </a>
 
@@ -56,13 +56,53 @@
         </div>
     </header>
 
-    <!--HERO-->
+    <!--HERO ANIMADO -->
     <section class="hero-slider">
+        <!-- 1. El fondo animado -->
         <div class="slider-bg">
-            <div class="slide" style="background-image: url('IMG/I1.webp');"></div>
-            <div class="slide" style="background-image: url('IMG/Plato.webp');"></div>
-            <div class="slide" style="background-image: url('IMG/I3.webp');"></div>
-            <div class="slide" style="background-image: url('IMG/I4.webp');"></div>
+            <div class="slide" style="background-image: url('IMG/');"></div>
+            <div class="slide" style="background-image: url('IMG/');"></div>
+            <div class="slide" style="background-image: url('IMG/');"></div>
+            <div class="slide" style="background-image: url('IMG/');"></div>
+        </div>
+
+        <!-- 2. Capa oscura para que resalte el texto -->
+        <div class="hero-overlay"></div>
+
+        <!-- 3. Los textos sincronizados con las imagenes -->
+        <div class="hero-text-container">
+            <!-- Texto 1 -->
+            <div class="text-slide">
+                <div class="glass-box">
+                    <h1 class="titulo-hero-sumate">¡Gracias por lo que tenemos!</h1>
+                    <p>Tu apoyo transforma vidas. Únete a nuestra red y sé parte del cambio en el futuro de nuestros
+                        pequeños.</p>
+                </div>
+            </div>
+            <!-- Texto 2 -->
+            <div class="text-slide">
+                <div class="glass-box">
+                    <h1 class="titulo-hero-sumate">Alimentando esperanzas</h1>
+                    <p>Cada donación económica o en especie se convierte en un plato seguro en la mesa de nuestra casa
+                        hogar.</p>
+                </div>
+            </div>
+            <!-- Texto 3 -->
+            <div class="text-slide">
+                <div class="glass-box">
+                    <h1 class="titulo-hero-sumate">Formación integral</h1>
+                    <p>La educación, el deporte y el amor son nuestras principales herramientas para forjar mejores
+                        seres humanos.</p>
+                </div>
+            </div>
+            <!-- Texto 4 -->
+            <div class="text-slide">
+                <div class="glass-box">
+                    <h1 class="titulo-hero-sumate">Sé un héroe hoy</h1>
+                    <p>Conviértete en voluntario o donador recurrente y deja una huella imborrable en el corazón de
+                        nuestra familia.</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -76,7 +116,6 @@
             </div>
 
             <div class="grid-3-col">
-                <!--Familiar-->
                 <div class="card-voluntariado" data-aos="fade-up" data-aos-delay="0">
                     <div class="voluntariado-header bg-rojo-suave">
                         <h3>Familiar</h3>
@@ -93,7 +132,6 @@
                     </div>
                 </div>
 
-                <!--Especifico-->
                 <div class="card-voluntariado" data-aos="fade-up" data-aos-delay="100">
                     <div class="voluntariado-header bg-naranja-suave">
                         <h3>Específico</h3>
@@ -110,7 +148,6 @@
                     </div>
                 </div>
 
-                <!--General-->
                 <div class="card-voluntariado" data-aos="fade-up" data-aos-delay="200">
                     <div class="voluntariado-header bg-amarillo-suave">
                         <h3>General</h3>
@@ -178,7 +215,6 @@
 
                 <!--Columna derecha de tarjeta BBVA y PayPal-->
                 <div class="paypal-container" data-aos="fade-left">
-                    <!--Tarjeta BBVA CSS-->
                     <div class="tarjeta-credito-ui">
                         <div class="tarjeta-bg"></div>
                         <div class="tarjeta-contenido">
@@ -192,7 +228,6 @@
                         </div>
                     </div>
 
-                    <!--Boton de PayPal-->
                     <div class="paypal-form-box">
                         <form action="https://www.paypal.com/donate" method="post" target="_blank">
                             <input type="hidden" name="hosted_button_id" value="YHZNPV7EA6X5Y" />
@@ -218,28 +253,24 @@
             </div>
 
             <div class="grid-visitas">
-                <!--Visita 1-->
                 <div class="flip-circular" data-aos="zoom-in" data-aos-delay="0">
                     <div class="flip-inner">
                         <div class="flip-front"><img src="IMG/G7.webp" alt="Visita" loading="lazy"></div>
                         <div class="flip-back"><img src="IMG/Enfermeria.webp" alt="Enfermeria" loading="lazy"></div>
                     </div>
                 </div>
-                <!--Visita 2-->
                 <div class="flip-circular" data-aos="zoom-in" data-aos-delay="100">
                     <div class="flip-inner">
                         <div class="flip-front"><img src="IMG/alfagroup.webp" alt="Alfa" loading="lazy"></div>
                         <div class="flip-back"><img src="IMG/Alfa.webp" alt="Alfa" loading="lazy"></div>
                     </div>
                 </div>
-                <!--Visita 3-->
                 <div class="flip-circular" data-aos="zoom-in" data-aos-delay="200">
                     <div class="flip-inner">
                         <div class="flip-front"><img src="IMG/dhls.webp" alt="DHL" loading="lazy"></div>
                         <div class="flip-back"><img src="IMG/DHL.webp" alt="DHL" loading="lazy"></div>
                     </div>
                 </div>
-                <!--Visita 4-->
                 <div class="flip-circular" data-aos="zoom-in" data-aos-delay="300">
                     <div class="flip-inner">
                         <div class="flip-front"><img src="IMG/cesc.webp" alt="Cesc" loading="lazy"></div>
@@ -310,7 +341,7 @@
                     <a href="https://instagram.com/casahogarnazareos" target="_blank" class="social-ig"
                         aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                 </div>
-                <a href="Sumate.html#donacion-paypal" class="btn-donar-footer">Hazte Donante</a>
+                <a href="./HTML/Sumate.html#aporta" class="btn-donar-footer">Hazte Donante</a>
             </div>
         </div>
 
@@ -325,7 +356,7 @@
             <a href="https://www.facebook.com/nazareosiap" target="_blank"><img src="IMG/B4.webp" width="80" height="80"
                     alt="NAZAREOS IAP" loading="lazy"></a>
             <a href="http://www.cemsamx.com/G.html" target="_blank"><img src="IMG/GC22.webp" width="120" height="120"
-                    alt="GC" loading="lazy"></a>
+                    alt="GC" loading="lazy" style="border-radius: 50%;"></a>
             <a href="https://www.facebook.com/nazareosac1" target="_blank"><img src="IMG/B5.webp" width="80" height="80"
                     alt="NAZAREOS AC" loading="lazy"></a>
             <a href="https://www.facebook.com/people/EC-Gens-Solutions/100068549594726/" target="_blank"><img
@@ -339,7 +370,7 @@
         <!--Creditos-->
         <div class="footer-creditos">
             <p>© Designed by: <b>Ing. Yair Maldonado / Lic. Karen Moreno / Lic. Montserrat Vazquez</b> - <a
-                    href="http://www.jarl.com.mx" target="_blank">JARL 2026</a> - Todos los Derechos Reservados.</p>
+                    href="http://www.jarl.com.mx" target="_blank">NAZAREOS IAP</a> - Todos los Derechos Reservados.</p>
         </div>
     </footer>
 
@@ -377,11 +408,9 @@
             <span class="cerrar-modal">&times;</span>
             <h2 class="titulo-modal">Porta voz</h2>
             <h3 class="pregunta-modal text-center">Acción social</h3>
-
             <div class="portavoz-img-container">
-                <img src="IMG/Juanca.webp" alt="Juanca, Porta voz" loading="lazy">
+                <img src="./IMG/Juanca.webp" alt="Juanca, Porta voz" loading="lazy">
             </div>
-
             <a href="https://api.whatsapp.com/send?phone=5618678811&text=Buen dia,%20quisiera%20recibir%20mas%20información%20por%20favor%20👋"
                 target="_blank" class="btn-naranja-pill btn-whatsapp-verde">
                 Envíame un mensaje
@@ -407,7 +436,6 @@
         <div class="modal-contenido text-center">
             <span class="cerrar-modal">&times;</span>
             <h2 class="titulo-modal">Teléfonos</h2>
-
             <div class="contenedor-botones-contacto">
                 <a href="https://api.whatsapp.com/send?phone=5618678811" target="_blank"
                     class="btn-contacto premium-wa">
@@ -427,7 +455,6 @@
         <div class="modal-contenido text-center">
             <span class="cerrar-modal">&times;</span>
             <h2 class="titulo-modal">Correos</h2>
-
             <div class="contenedor-botones-contacto">
                 <a href="mailto:contacto@nazareosiap.org" class="btn-contacto premium-mail-1">
                     <div class="icono-circular"><i class="fa-solid fa-envelope"></i></div>
@@ -446,15 +473,12 @@
         <div class="modal-contenido">
             <span class="cerrar-modal">&times;</span>
             <h2 class="titulo-modal">Preguntas frecuentes</h2>
-
             <h3 class="pregunta-modal">¿Cuántos años debo tener para visitarlos?</h3>
             <p class="respuesta-modal">La edad no es un impedimento, eres bienvenido. Si eres menor de edad, requerimos
                 el acompañamiento de un adulto.</p>
-
             <h3 class="pregunta-modal">¿Cuántas personas pueden acudir a la visita?</h3>
             <p class="respuesta-modal">¡Todos son bienvenidos a participar! Comunica en tu cita cuantas personas
                 asistirán.</p>
-
             <h3 class="pregunta-modal">¿Cuánto tiempo debemos tener disponible para hacer voluntariado?</h3>
             <p class="respuesta-modal">Todo tipo de voluntariado tiene una duración de 6 meses, sin embargo,
                 consideramos tus horarios disponibles para que puedas pasar tiempo con nuestros pequeños.</p>
@@ -478,7 +502,6 @@
             <p class="respuesta-modal text-center">Nuestro sitio web puede contener enlaces a otros sitios web de
                 terceros que no están bajo nuestro control. No nos hacemos responsables de las prácticas de privacidad o
                 el contenido de estos sitios web.</p>
-
             <div style="margin-top: 30px;">
                 <a href="MEDIA/Aviso de privacidad CH.pdf" target="_blank" class="btn-naranja-pill">Descargar</a>
             </div>
@@ -493,7 +516,6 @@
             <p class="respuesta-modal">Somos un libro abierto. Creemos que tienes derecho a ver cómo estamos utilizando
                 los recursos que nos confías. Si deseas ver nuestro Informe Anual, envíanos un comentario a este
                 formulario:</p>
-
             <form action="https://formsubmit.co/contacto@nazareosiap.org" method="POST" class="formulario-original">
                 <input name="Nombre" placeholder="Nombre Completo" type="text" required>
                 <input name="Telefono" placeholder="Numero Telefonico" required maxlength="10">
@@ -506,54 +528,53 @@
         </div>
     </div>
 
+    <!-- BOTON WHATSAPP FLOTANTE -->
+    <a href="https://api.whatsapp.com/send?phone=5618678811&text=¡Hola!%20Me%20gustaría%20recibir%20más%20información%20sobre%20Casa%20Hogar%20Nazareos"
+        class="btn-whatsapp-flotante" target="_blank" aria-label="Chat en WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
 
-    <!-- SCRIPTS -->
+    <!-- AVISO DE COOKIES -->
+    <div id="aviso-cookies" class="aviso-cookies">
+        <div class="cookies-texto">
+            Utilizamos cookies propias y de terceros para mejorar tu experiencia y analizar el tráfico de nuestro sitio.
+            Al continuar navegando, aceptas nuestra <a href="#" class="abrir-modal"
+                data-modal="modal-privacidad">Política de Privacidad</a>.
+        </div>
+        <button id="btn-aceptar-cookies" class="btn-aceptar-cookies">Entendido</button>
+    </div>
+
+
+    <!-- SCRIPTS LIMPIOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ once: false, offset: 100 });
+
         window.addEventListener("scroll", function () {
             let header = document.querySelector(".header-premium");
             header.classList.toggle("sticky", window.scrollY > 50);
         });
 
-        // EVENTOS DEL DOM 
         document.addEventListener("DOMContentLoaded", () => {
-            // SCRIPT PARA ABRIR Y CERRAR MODALES
+            // MODALES
             const botonesAbrir = document.querySelectorAll('.abrir-modal');
-            const botonesCerrar = document.querySelectorAll('.cerrar-modal');
             const modales = document.querySelectorAll('.modal-ventana');
 
-            // Abre el modal y no hace el salto arriba
             botonesAbrir.forEach(boton => {
                 boton.addEventListener('click', (e) => {
                     e.preventDefault();
-                    const modalId = boton.getAttribute('data-modal');
-                    const modal = document.getElementById(modalId);
-                    if (modal) {
-                        modal.classList.add('activo');
-                        document.body.style.overflow = 'hidden';
-                    }
+                    const modal = document.getElementById(boton.getAttribute('data-modal'));
+                    if (modal) { modal.classList.add('activo'); document.body.style.overflow = 'hidden'; }
                 });
             });
 
-            // Cierra el modal desde la X
-            botonesCerrar.forEach(boton => {
-                boton.addEventListener('click', () => {
-                    const modal = boton.closest('.modal-ventana');
-                    if (modal) {
-                        modal.classList.remove('activo');
-                        document.body.style.overflow = 'auto';
-                    }
-                });
-            });
-
-            // Cierra el modal dando clic afuera de la caja
-            window.addEventListener('click', (e) => {
-                modales.forEach(modal => {
-                    if (e.target === modal) {
-                        modal.classList.remove('activo');
-                        document.body.style.overflow = 'auto';
-                    }
+            modales.forEach(modal => {
+                const btnCerrar = modal.querySelector('.cerrar-modal');
+                if (btnCerrar) {
+                    btnCerrar.addEventListener('click', () => { modal.classList.remove('activo'); document.body.style.overflow = 'auto'; });
+                }
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) { modal.classList.remove('activo'); document.body.style.overflow = 'auto'; }
                 });
             });
 
@@ -565,28 +586,32 @@
             if (menuToggle && navMenu) {
                 menuToggle.addEventListener('click', () => {
                     navMenu.classList.toggle('activo');
-
-                    // Cambiar icono de Hamburguesa a una X
                     const icono = menuToggle.querySelector('i');
-                    if (navMenu.classList.contains('activo')) {
-                        icono.classList.remove('fa-bars');
-                        icono.classList.add('fa-xmark');
-                    } else {
-                        icono.classList.remove('fa-xmark');
-                        icono.classList.add('fa-bars');
-                    }
+                    icono.classList.toggle('fa-bars');
+                    icono.classList.toggle('fa-xmark');
                 });
 
-                // Cerrar menu automaticamente cuando tocan un enlace
                 linksMenu.forEach(link => {
                     link.addEventListener('click', () => {
                         navMenu.classList.remove('activo');
                         const icono = menuToggle.querySelector('i');
-                        if (icono) {
-                            icono.classList.remove('fa-xmark');
-                            icono.classList.add('fa-bars');
-                        }
+                        if (icono) { icono.classList.add('fa-bars'); icono.classList.remove('fa-xmark'); }
                     });
+                });
+            }
+
+            // COOKIES
+            const avisoCookies = document.getElementById('aviso-cookies');
+            const btnAceptar = document.getElementById('btn-aceptar-cookies');
+
+            if (!localStorage.getItem('cookies_aceptadas')) {
+                setTimeout(() => avisoCookies.classList.add('mostrar'), 1000);
+            }
+
+            if (btnAceptar) {
+                btnAceptar.addEventListener('click', () => {
+                    avisoCookies.classList.remove('mostrar');
+                    localStorage.setItem('cookies_aceptadas', 'true');
                 });
             }
         });

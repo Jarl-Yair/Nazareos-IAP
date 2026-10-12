@@ -4,7 +4,6 @@
     --color-oscuro: #1a1a1a;
     --color-blanco: #ffffff;
     --color-gris: #f4f4f4;
-
     --font-principal: 'Poppins', sans-serif;
 }
 
@@ -14,11 +13,14 @@
     box-sizing: border-box;
 }
 
+html,
 body {
     font-family: var(--font-principal);
     background-color: var(--color-gris);
     color: var(--color-oscuro);
     overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
 }
 
 /*HEADER*/
@@ -69,7 +71,6 @@ body {
     height: auto;
 }
 
-/*Enlaces del menu*/
 .nav-menu {
     display: flex;
     gap: 35px;
@@ -88,7 +89,6 @@ body {
     color: var(--color-oscuro);
 }
 
-/*Linea animada debajo de los enlaces*/
 .nav-menu a::after {
     content: '';
     position: absolute;
@@ -106,7 +106,6 @@ body {
     width: 100%;
 }
 
-/*Botón de Donar*/
 .btn-donar-premium {
     text-decoration: none;
     background-color: var(--color-blanco);
@@ -211,7 +210,6 @@ body {
     color: rgba(255, 255, 255, 0.9);
 }
 
-/*Botones del Hero*/
 .hero-buttons {
     display: flex;
     gap: 20px;
@@ -606,7 +604,6 @@ body {
     line-height: 1.6;
 }
 
-/*Boton transparente con borde blanco*/
 .btn-borde-blanco {
     display: inline-block;
     border: 2px solid var(--color-blanco);
@@ -713,7 +710,6 @@ body {
     margin-bottom: 25px;
 }
 
-/* Responsivo para la pantalla dividida */
 @media (max-width: 900px) {
 
     .visitanos-img-col,
@@ -729,7 +725,6 @@ body {
         padding: 40px 5%;
     }
 }
-
 
 /*FOOTER Y ALIANZAS*/
 .footer-premium {
@@ -953,7 +948,6 @@ body {
     }
 }
 
-/*Modal especifico para la carta del fundador*/
 #modal-fundador .modal-contenido {
     max-width: 800px;
     padding: 30px;
@@ -1019,10 +1013,6 @@ body {
     line-height: 1.7;
 }
 
-.text-center {
-    text-align: center;
-}
-
 /* ---FORMULARIO--- */
 .formulario-original {
     display: flex;
@@ -1061,7 +1051,6 @@ body {
     background-size: 16px;
 }
 
-/*Boton*/
 .btn-naranja-pill {
     background-color: var(--color-primario);
     color: var(--color-blanco);
@@ -1087,8 +1076,6 @@ body {
 }
 
 /*MODALES DE CONTACTO*/
-
-/*Imagen de porta voz*/
 .portavoz-img-container {
     margin: 30px 0;
 }
@@ -1117,7 +1104,6 @@ body {
     box-shadow: 0 15px 25px -5px rgba(16, 185, 129, 0.5);
 }
 
-/*Contenedor y botones de telefonos y correos*/
 .contenedor-botones-contacto {
     display: flex;
     flex-direction: column;
@@ -1204,10 +1190,7 @@ body {
     color: var(--color-blanco);
 }
 
-/*RESPONSIVE*/
 @media (min-width: 768px) {
-
-    /*Voluntariado*/
     .split-layout {
         flex-direction: row;
         text-align: left;
@@ -1224,7 +1207,6 @@ body {
         justify-content: flex-end;
     }
 
-    /*Visitanos*/
     .seccion-visitanos {
         flex-direction: row;
     }
@@ -1240,7 +1222,7 @@ body {
     }
 }
 
-/*RESPONSIVE DESIGN*/
+/* RESPONSIVE*/
 .menu-toggle {
     display: none;
 }
@@ -1251,13 +1233,14 @@ body {
 
 @media (max-width: 950px) {
 
-    /* --- Header & Navbar --- */
+    /* --- HEADER Y NAVEGACION --- */
     .menu-toggle {
         display: block;
         font-size: 30px;
         color: var(--color-blanco);
         cursor: pointer;
         z-index: 1002;
+        transition: color 0.3s;
     }
 
     .header-premium.sticky .menu-toggle {
@@ -1280,7 +1263,7 @@ body {
         padding: 40px 0;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         transition: left 0.4s ease;
-        gap: 20px;
+        gap: 25px;
         z-index: 1000;
     }
 
@@ -1290,7 +1273,7 @@ body {
 
     .nav-menu a {
         color: var(--color-oscuro);
-        font-size: 18px;
+        font-size: 20px;
         width: 100%;
         text-align: center;
     }
@@ -1305,15 +1288,14 @@ body {
         width: auto !important;
     }
 
-    /* --- Hero --- */
+    /* --- HERO --- */
     .hero-premium {
         background-attachment: scroll;
     }
 
-    /* Quita el fixed en móvil para que no trabe la pantalla */
     .hero-title {
         font-size: 40px;
-        margin-top: 30px;
+        margin-top: 20px;
     }
 
     .hero-subtitle {
@@ -1321,18 +1303,20 @@ body {
     }
 
     .hero-buttons {
+        display: flex;
         flex-direction: column;
         width: 100%;
+        gap: 15px;
     }
 
     .btn-primario,
     .btn-secundario {
         width: 100%;
         text-align: center;
-        margin-bottom: 10px;
+        box-sizing: border-box;
     }
 
-    /* --- Secciones Generales --- */
+    /* --- AJUSTES GENERALES A 1 COLUMNA --- */
     .contenedor-premium {
         padding: 50px 20px;
     }
@@ -1341,7 +1325,34 @@ body {
         font-size: 30px;
     }
 
-    /* --- Voluntariado (Split Layout) --- */
+    .galeria-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria-item {
+        height: 250px;
+        max-width: 100%;
+    }
+
+    .cards-apoyo {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .grid-programas {
+        grid-template-columns: 1fr;
+    }
+
+    .entes-grid {
+        gap: 30px;
+    }
+
+    .ente-logo img {
+        width: 180px;
+        height: 180px;
+    }
+
+    /* --- PANTALLAS DIVIDIDAS--- */
     .split-layout {
         flex-direction: column;
         text-align: center;
@@ -1351,7 +1362,11 @@ body {
         text-align: center;
     }
 
-    /* --- Visítanos (Split Layout) --- */
+    .voluntariado-img img {
+        max-width: 100%;
+        height: auto;
+    }
+
     .seccion-visitanos-split {
         flex-direction: column;
     }
@@ -1366,33 +1381,21 @@ body {
         padding: 50px 20px;
     }
 
-    /* --- Post-it responsivo --- */
+    /* --- POST-IT--- */
     .post-it-suscripcion {
         transform: rotate(0deg);
-        /* Lo enderezamos para que no desborde la pantalla */
         max-width: 100%;
         padding: 30px 20px;
+        box-sizing: border-box;
     }
 
     .post-it-suscripcion .cinta-adhesiva {
         transform: translateX(-50%) rotate(0deg);
     }
 
-    /* --- Grids (Galería y Tarjetas) --- */
-    .galeria-grid,
-    .cards-apoyo,
-    .grid-programas {
-        grid-template-columns: 1fr;
-    }
-
-    .galeria-item {
-        height: 250px;
-        max-width: 100%;
-    }
-
-    /* --- Footer --- */
+    /* --- FOOTER --- */
     .footer-main {
-        flex-direction: column;
+        grid-template-columns: 1fr;
         text-align: center;
         gap: 30px;
     }
@@ -1405,9 +1408,166 @@ body {
     .footer-social {
         justify-content: center;
     }
+}
+
+/* BOTON WHATSAPP FLOTANTE*/
+.btn-whatsapp-flotante {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+    z-index: 1000;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-whatsapp-flotante:hover {
+    background-color: #128c7e;
+    transform: scale(1.1);
+    color: #FFF;
+}
+
+/*AVISO DE COOKIES*/
+.aviso-cookies {
+    position: fixed;
+    bottom: -100px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(26, 26, 26, 0.95);
+    backdrop-filter: blur(10px);
+    color: var(--color-blanco);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2000;
+    transition: bottom 0.5s ease;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.aviso-cookies.mostrar {
+    bottom: 0;
+}
+
+.cookies-texto {
+    font-size: 14px;
+    max-width: 80%;
+    line-height: 1.5;
+}
+
+.cookies-texto a {
+    color: var(--color-primario);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-aceptar-cookies {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    border: none;
+    padding: 10px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn-aceptar-cookies:hover {
+    background-color: #e08b2c;
+}
+
+@media (max-width: 768px) {
+    .aviso-cookies {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .cookies-texto {
+        max-width: 100%;
+        font-size: 12px;
+    }
+
+    .btn-whatsapp-flotante {
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+/* ESTILO CEMSA PARA ALIANZAS EN FON  */
+.footer-alianzas a:nth-child(1) img {
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+.footer-alianzas a:nth-child(2) img {
+    box-shadow: 0 0 20px rgba(0, 64, 255, 0.6);
+}
+
+.footer-alianzas a:nth-child(3) img {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.footer-alianzas a:nth-child(4) img {
+    box-shadow: 0 0 20px rgba(244, 157, 57, 0.6);
+}
+
+.footer-alianzas a:nth-child(5) img {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+}
+
+.footer-alianzas a:nth-child(6) img {
+    box-shadow: 0 0 20px rgba(251, 0, 255, 0.4);
+}
+
+.footer-alianzas a:nth-child(7) img {
+    box-shadow: 0 0 20px rgba(127, 181, 61, 0.6);
+}
+
+.footer-alianzas a:nth-child(8) img {
+    box-shadow: 0 0 20px rgba(0, 255, 30, 0.4);
+}
+
+.footer-alianzas a:nth-child(9) img {
+    box-shadow: 0 0 20px rgba(9, 230, 255, 0.6);
+}
+
+@media (max-width: 768px) {
+    .footer-alianzas {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        justify-items: center;
+        align-items: center;
+        padding: 40px 10px;
+    }
 
     .footer-alianzas img {
-        width: 60px;
-        height: 60px;
+        width: 65px;
+        height: 65px;
+        filter: grayscale(0%);
+        opacity: 1;
+    }
+
+    .footer-alianzas a:nth-child(5) {
+        grid-column: 1 / -1;
+        margin: 20px 0;
+    }
+
+    .footer-alianzas a:nth-child(5) img {
+        width: 120px;
+        height: 120px;
     }
 }

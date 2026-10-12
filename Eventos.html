@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos - Nazareos IAP</title>
+    <link rel="icon" href="IMG/Icono.webp">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Tipografías (Poppins y Atma para los títulos del evento) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Atma:wght@600;700&family=Poppins:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!--Google Analytics-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6V5BJV51M9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-6V5BJV51M9');
+    </script>
+
+    <!-- ESTILOS EXCLUSIVOS PARA LA PÁGINA DE EVENTOS -->
+    <style>
+        .eventos-container {
+            max-width: 1100px;
+            margin: 130px auto 60px;
+            /* Margen superior para el header fijo */
+            padding: 0 20px;
+        }
+
+        .titulo-eventos {
+            text-align: center;
+            font-family: 'Atma', cursive;
+            font-size: 60px;
+            color: var(--color-oscuro);
+            margin-bottom: 50px;
+            line-height: 1.2;
+        }
+
+        .split-eventos {
+            display: flex;
+            gap: 60px;
+            align-items: flex-start;
+        }
+
+        .img-evento {
+            flex: 1;
+        }
+
+        .img-evento img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            display: block;
+        }
+
+        .form-evento {
+            flex: 1;
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .form-evento h2 {
+            font-family: 'Atma', cursive;
+            font-size: 38px;
+            color: var(--color-oscuro);
+            margin-bottom: 30px;
+        }
+
+        .input-evento {
+            width: 100%;
+            padding: 16px 20px;
+            margin-bottom: 18px;
+            background-color: #ffedd5;
+            /* Tono pastel naranja/amarillo */
+            border: none;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            color: #333;
+            outline: none;
+            transition: box-shadow 0.3s;
+        }
+
+        .input-evento:focus {
+            box-shadow: 0 0 0 3px rgba(244, 157, 57, 0.3);
+        }
+
+        .botones-evento {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .btn-evento {
+            flex: 1;
+            background-color: #fef08a;
+            /* Amarillo pastel */
+            color: var(--color-oscuro);
+            padding: 14px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn-evento:hover {
+            background-color: #fde047;
+            transform: translateY(-2px);
+        }
+
+        .seccion-donar-evento {
+            margin-top: 60px;
+        }
+
+        .seccion-donar-evento h3 {
+            font-family: 'Atma', cursive;
+            font-size: 35px;
+            color: var(--color-oscuro);
+            margin-bottom: 5px;
+        }
+
+        .seccion-donar-evento p {
+            font-family: 'Atma', cursive;
+            font-size: 24px;
+            color: var(--color-oscuro);
+            margin-bottom: 25px;
+            line-height: 1.3;
+        }
+
+        .btn-paypal-evento {
+            background-color: #ffc439;
+            color: #003087;
+            padding: 14px 40px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 18px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 5px 15px rgba(255, 196, 57, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .btn-paypal-evento:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Responsivo para la página de eventos */
+        @media (max-width: 850px) {
+            .split-eventos {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .titulo-eventos {
+                font-size: 45px;
+                margin-bottom: 30px;
+            }
+
+            .botones-evento {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body style="background-color: var(--color-blanco);">
+
+    <!--HEADER PREMIUM-->
+    <header class="header-premium sticky">
+        <div class="nav-container">
+            <a href="index.html" class="logo-brand">
+                <img src="IMG/B4.webp" alt="Nazareos Logo" width="45" height="45">
+                <span>NAZAREOS IAP</span>
+            </a>
+
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <nav class="nav-menu" id="nav-menu">
+                <a href="index.html">Inicio</a>
+                <a href="Quienes.html">¿Quiénes Somos?</a>
+                <a href="Sumate.html">Súmate</a>
+                <a href="index.html#zona-contacto">Contacto</a>
+                <a href="Sumate.html#donacion-paypal" class="btn-donar-movil">Donar <i
+                        class="fa-solid fa-heart"></i></a>
+            </nav>
+
+            <a href="Sumate.html#donacion-paypal" class="btn-donar-premium">
+                Donar <i class="fa-solid fa-heart cora-latido"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- ZONA DEL EVENTO (Diseño Limpio Original) -->
+    <main class="eventos-container">
+
+        <h1 class="titulo-eventos" data-aos="fade-down">Eventos Próximos</h1>
+
+        <div class="split-eventos">
+            <!-- Columna Izquierda: Flyer -->
+            <div class="img-evento" data-aos="fade-right">
+                <!-- Asegúrate de que la imagen se llame exactamente 'kermes.webp' en tu carpeta IMG -->
+                <img src="IMG/kermes.webp" alt="Kermes Primavera 2025" loading="lazy">
+            </div>
+
+            <!-- Columna Derecha: Formulario y PayPal -->
+            <div class="form-evento" data-aos="fade-left">
+                <h2>Confirma tu asistencia</h2>
+
+                <!-- Formulario 100% Funcional con FormSubmit -->
+                <form action="https://formsubmit.co/contacto@nazareosiap.org" method="POST">
+                    <input type="text" name="Nombre" placeholder="Nombre Completo" required class="input-evento">
+                    <input type="tel" name="Telefono" placeholder="Número Telefónico" maxlength="10" required
+                        class="input-evento">
+                    <input type="email" name="Correo" placeholder="Correo Electrónico" required class="input-evento">
+
+                    <!-- Campo oculto para identificar el evento -->
+                    <input type="hidden" name="Asunto" value="Confirmación Evento Kermes">
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <div class="botones-evento">
+                        <button type="submit" class="btn-evento">Enviar</button>
+                        <!-- Botón que descarga/abre el PDF directo -->
+                        <a href="MEDIA/Aviso de privacidad CH.pdf" target="_blank" class="btn-evento">Aviso de
+                            privacidad</a>
+                    </div>
+                </form>
+
+                <!-- Zona de Donación a Distancia -->
+                <div class="seccion-donar-evento">
+                    <h3>¿No puedes asistir?...</h3>
+                    <p>No te preocupes, puedes donar a distancia.</p>
+
+                    <!-- Enlace directo de PayPal funcional -->
+                    <a href="https://www.paypal.com/donate?hosted_button_id=YHZNPV7EA6X5Y" target="_blank"
+                        class="btn-paypal-evento">
+                        Donar con <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal"
+                            style="height: 22px;">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!--FOOTER PREMIUM-->
+    <footer class="footer-premium">
+        <div class="footer-main">
+            <!--Columna de informacion-->
+            <div class="footer-col">
+                <h4>Nazareos IAP</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="Quienes.html">¿Quiénes somos?</a></li>
+                    <li><a href="Sumate.html">Súmate</a></li>
+                    <li><a href="index.html#zona-contacto">Contáctanos</a></li>
+                </ul>
+            </div>
+
+            <!--Columna de ayuda-->
+            <div class="footer-col">
+                <h4>Ayuda</h4>
+                <ul>
+                    <li><a href="#" class="abrir-modal" data-modal="modal-faq">Preguntas frecuentes</a></li>
+                    <li><a href="#" class="abrir-modal" data-modal="modal-fundador">Carta del fundador</a></li>
+                    <li><a href="MEDIA/Aviso de privacidad CH.pdf" target="_blank">Política de Privacidad</a></li>
+                    <li><a href="#" class="abrir-modal" data-modal="modal-transparencia">Transparencia</a></li>
+                </ul>
+            </div>
+
+            <!--Columna de contacto-->
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <ul class="footer-contacto">
+                    <li><a href="#" class="abrir-modal" data-modal="modal-portavoz"
+                            style="color: #555; text-decoration: none;"><i class="fa-solid fa-bullhorn"></i> Porta
+                            voz</a></li>
+                    <li><a href="#" class="abrir-modal" data-modal="modal-ubicacion"
+                            style="color: #555; text-decoration: none;"><i class="fa-solid fa-location-dot"></i>
+                            Ubicación</a></li>
+                    <li><a href="#" class="abrir-modal" data-modal="modal-telefonos"
+                            style="color: #555; text-decoration: none;"><i class="fa-solid fa-phone"></i> Teléfonos</a>
+                    </li>
+                    <li><a href="#" class="abrir-modal" data-modal="modal-correo"
+                            style="color: #555; text-decoration: none;"><i class="fa-solid fa-envelope"></i> Correo</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!--Columna de redes sociales-->
+            <div class="footer-col">
+                <h4>Síguenos</h4>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/nazareosiap/?mibextid=LQQJ4d" target="_blank" class="social-fb"
+                        aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/nazareosiap" target="_blank" class="social-tw" aria-label="Twitter">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 512 512" fill="currentColor">
+                            <path
+                                d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
+                        </svg>
+                    </a>
+                    <a href="https://instagram.com/casahogarnazareos" target="_blank" class="social-ig"
+                        aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <a href="Sumate.html#donacion-paypal" class="btn-donar-footer">Hazte Donante</a>
+            </div>
+        </div>
+
+        <!--Alianzas-->
+        <div class="footer-alianzas">
+            <a href="https://www.facebook.com/TiendasUrbanCoatings" target="_blank"><img src="IMG/B1.webp" width="80"
+                    height="80" alt="URBAN" loading="lazy"></a>
+            <a href="https://www.facebook.com/CEMSARecubrimientos" target="_blank"><img src="IMG/B2.webp" width="80"
+                    height="80" alt="CEMSA" loading="lazy"></a>
+            <a href="https://www.facebook.com/jarlserv" target="_blank"><img src="IMG/B3.webp" width="80" height="80"
+                    alt="JARL" loading="lazy"></a>
+            <a href="https://www.facebook.com/nazareosiap" target="_blank"><img src="IMG/B4.webp" width="80" height="80"
+                    alt="NAZAREOS IAP" loading="lazy"></a>
+            <a href="http://www.cemsamx.com/G.html" target="_blank"><img src="IMG/GC22.webp" width="120" height="120"
+                    alt="GC" loading="lazy" style="border-radius: 50%;"></a>
+            <a href="https://www.facebook.com/nazareosac1" target="_blank"><img src="IMG/B5.webp" width="80" height="80"
+                    alt="NAZAREOS AC" loading="lazy"></a>
+            <a href="https://www.facebook.com/people/EC-Gens-Solutions/100068549594726/" target="_blank"><img
+                    src="IMG/B6.webp" width="80" height="80" alt="GENS" loading="lazy"></a>
+            <a href="https://www.facebook.com/people/EPP/100088719123320/" target="_blank"><img src="IMG/B7.webp"
+                    width="80" height="80" alt="EPP" loading="lazy"></a>
+            <a href="https://www.facebook.com/KumonSanJuanTultepecEdomex" target="_blank"><img src="IMG/B8.webp"
+                    width="80" height="80" alt="KUMON" loading="lazy"></a>
+        </div>
+
+        <!--Creditos-->
+        <div class="footer-creditos">
+            <p>© Designed by: <b>Ing. Yair Maldonado / Lic. Karen Moreno / Lic. Montserrat Vazquez</b> - <a
+                    href="http://www.jarl.com.mx" target="_blank">NAZAREOS IAP</a> - Todos los Derechos Reservados.</p>
+        </div>
+    </footer>
+
+    <!--ZONA DE MODALES GLOBALES-->
+    <!--Modal porta voz-->
+    <div id="modal-portavoz" class="modal-ventana">
+        <div class="modal-contenido text-center">
+            <span class="cerrar-modal">&times;</span>
+            <h2 class="titulo-modal">Porta voz</h2>
+            <h3 class="pregunta-modal text-center">Acción social</h3>
+            <div class="portavoz-img-container">
+                <img src="./IMG/Juanca.webp" alt="Juanca, Porta voz" loading="lazy">
+            </div>
+            <a href="https://api.whatsapp.com/send?phone=5618678811&text=Buen dia,%20quisiera%20recibir%20mas%20información%20por%20favor%20👋"
+                target="_blank" class="btn-naranja-pill btn-whatsapp-verde">
+                Envíame un mensaje
+            </a>
+        </div>
+    </div>
+
+    <!--Modal Ubicacion-->
+    <div id="modal-ubicacion" class="modal-ventana">
+        <div class="modal-contenido">
+            <span class="cerrar-modal">&times;</span>
+            <h2 class="titulo-modal">Ubicación</h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3757.5068591806644!2d-99.12682702490869!3d19.648369781677673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f44031d42fef%3A0x385d8bf8e2c25cb9!2sCasa%20Hogar%20Nazareos%20IAP!5e0!3m2!1ses!2smx!4v1682101012405!5m2!1ses!2smx"
+                width="100%" height="350"
+                style="border-radius:16px; border:none; box-shadow: 0 10px 20px rgba(0,0,0,0.1);" allowfullscreen=""
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+    <!--Modal telefonos-->
+    <div id="modal-telefonos" class="modal-ventana">
+        <div class="modal-contenido text-center">
+            <span class="cerrar-modal">&times;</span>
+            <h2 class="titulo-modal">Teléfonos</h2>
+            <div class="contenedor-botones-contacto">
+                <a href="https://api.whatsapp.com/send?phone=5618678811" target="_blank"
+                    class="btn-contacto premium-wa">
+                    <div class="icono-circular"><i class="fa-brands fa-whatsapp"></i></div>
+                    <span>56 18678811</span>
+                </a>
+                <a href="tel:5572468530" class="btn-contacto premium-tel">
+                    <div class="icono-circular"><i class="fa-solid fa-phone"></i></div>
+                    <span>55 72468530</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal Correos-->
+    <div id="modal-correo" class="modal-ventana">
+        <div class="modal-contenido text-center">
+            <span class="cerrar-modal">&times;</span>
+            <h2 class="titulo-modal">Correos</h2>
+            <div class="contenedor-botones-contacto">
+                <a href="mailto:contacto@nazareosiap.org" class="btn-contacto premium-mail-1">
+                    <div class="icono-circular"><i class="fa-solid fa-envelope"></i></div>
+                    <span>contacto@nazareosiap.org</span>
+                </a>
+                <a href="mailto:carlos.ugalde@nazareosiap.org" class="btn-contacto premium-mail-2">
+                    <div class="icono-circular"><i class="fa-solid fa-envelope"></i></div>
+                    <span>carlos.ugalde@nazareosiap.org</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal FAQ-->
+    <div id="modal-faq" class="modal-ventana">
+        <div class="modal-contenido">
+            <span class="cerrar-modal">&times;</span>
+            <h2 class="titulo-modal">Preguntas frecuentes</h2>
+            <h3 class="pregunta-modal">¿Cuántos años debo tener para visitarlos?</h3>
+            <p class="respuesta-modal">La edad no es un impedimento, eres bienvenido. Si eres menor de edad, requerimos
+                el acompañamiento de un adulto.</p>
+            <h3 class="pregunta-modal">¿Cuántas personas pueden acudir a la visita?</h3>
+            <p class="respuesta-modal">¡Todos son bienvenidos a participar! Comunica en tu cita cuantas personas
+                asistirán.</p>
+            <h3 class="pregunta-modal">¿Cuánto tiempo debemos tener disponible para hacer voluntariado?</h3>
+            <p class="respuesta-modal">Todo tipo de voluntariado tiene una duración de 6 meses, sin embargo,
+                consideramos tus horarios disponibles para que puedas pasar tiempo con nuestros pequeños.</p>
+        </div>
+    </div>
+
+    <!--Modal fundador-->
+    <div id="modal-fundador" class="modal-ventana">
+        <div class="modal-contenido modal-carta">
+            <span class="cerrar-modal">&times;</span>
+            <img src="IMG/Reporte de transparencia.webp" alt="Carta del Fundador"
+                style="width: 100%; display: block; border-radius: 5px;" loading="lazy">
+        </div>
+    </div>
+
+    <!--Modal transparencia-->
+    <div id="modal-transparencia" class="modal-ventana">
+        <div class="modal-contenido">
+            <span class="cerrar-modal">&times;</span>
+            <h2 class="titulo-modal">Transparencia</h2>
+            <p class="respuesta-modal">Somos un libro abierto. Creemos que tienes derecho a ver cómo estamos utilizando
+                los recursos que nos confías. Si deseas ver nuestro Informe Anual, envíanos un comentario a este
+                formulario:</p>
+            <form action="https://formsubmit.co/contacto@nazareosiap.org" method="POST" class="formulario-original">
+                <input name="Nombre" placeholder="Nombre Completo" type="text" required>
+                <input name="Telefono" placeholder="Numero Telefonico" required maxlength="10">
+                <input name="Correo" placeholder="Correo Electronico" type="email" required>
+                <select name="Asunto">
+                    <option value="Transparencia">Informe de Transparencia</option>
+                </select>
+                <button type="submit" class="btn-naranja-pill btn-enviar-form">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- BOTON WHATSAPP FLOTANTE -->
+    <a href="https://api.whatsapp.com/send?phone=5618678811&text=¡Hola!%20Me%20gustaría%20recibir%20más%20información%20sobre%20Casa%20Hogar%20Nazareos"
+        class="btn-whatsapp-flotante" target="_blank" aria-label="Chat en WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- AVISO DE COOKIES -->
+    <div id="aviso-cookies" class="aviso-cookies">
+        <div class="cookies-texto">
+            Utilizamos cookies propias y de terceros para mejorar tu experiencia y analizar el tráfico de nuestro sitio.
+            Al continuar navegando, aceptas nuestra <a href="MEDIA/Aviso de privacidad CH.pdf" target="_blank">Política
+                de Privacidad</a>.
+        </div>
+        <button id="btn-aceptar-cookies" class="btn-aceptar-cookies">Entendido</button>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: false, offset: 100 });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            // MODALES GLOBALES
+            const botonesAbrir = document.querySelectorAll('.abrir-modal');
+            const modales = document.querySelectorAll('.modal-ventana');
+
+            botonesAbrir.forEach(boton => {
+                boton.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const modal = document.getElementById(boton.getAttribute('data-modal'));
+                    if (modal) { modal.classList.add('activo'); document.body.style.overflow = 'hidden'; }
+                });
+            });
+
+            modales.forEach(modal => {
+                const btnCerrar = modal.querySelector('.cerrar-modal');
+                if (btnCerrar) {
+                    btnCerrar.addEventListener('click', () => { modal.classList.remove('activo'); document.body.style.overflow = 'auto'; });
+                }
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) { modal.classList.remove('activo'); document.body.style.overflow = 'auto'; }
+                });
+            });
+
+            // MENU HAMBURGUESA
+            const menuToggle = document.getElementById('mobile-menu');
+            const navMenu = document.getElementById('nav-menu');
+            const linksMenu = navMenu ? navMenu.querySelectorAll('a') : [];
+
+            if (menuToggle && navMenu) {
+                menuToggle.addEventListener('click', () => {
+                    navMenu.classList.toggle('activo');
+                    const icono = menuToggle.querySelector('i');
+                    icono.classList.toggle('fa-bars');
+                    icono.classList.toggle('fa-xmark');
+                });
+
+                linksMenu.forEach(link => {
+                    link.addEventListener('click', () => {
+                        navMenu.classList.remove('activo');
+                        const icono = menuToggle.querySelector('i');
+                        if (icono) { icono.classList.add('fa-bars'); icono.classList.remove('fa-xmark'); }
+                    });
+                });
+            }
+
+            // COOKIES
+            const avisoCookies = document.getElementById('aviso-cookies');
+            const btnAceptar = document.getElementById('btn-aceptar-cookies');
+
+            if (!localStorage.getItem('cookies_aceptadas')) {
+                setTimeout(() => avisoCookies.classList.add('mostrar'), 1000);
+            }
+
+            if (btnAceptar) {
+                btnAceptar.addEventListener('click', () => {
+                    avisoCookies.classList.remove('mostrar');
+                    localStorage.setItem('cookies_aceptadas', 'true');
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

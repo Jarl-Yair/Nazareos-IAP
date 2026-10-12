@@ -104,19 +104,6 @@
     margin-top: 40px;
 }
 
-@media (max-width: 1024px) {
-    .grid-valores {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .grid-valores {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-}
-
 .item-valor {
     background: var(--color-blanco);
     padding: 30px 10px;
@@ -215,7 +202,7 @@
     color: #10b981;
 }
 
-/*MODELO DE FORMACIÓN*/
+/* ---MODELO DE FORMACION--- */
 .seccion-formacion-detallada {
     padding-bottom: 40px;
 }
@@ -247,7 +234,6 @@
     perspective: 1000px;
 }
 
-/*La imagen superior con filtro*/
 .imagen-header {
     position: relative;
     height: 200px;
@@ -271,7 +257,6 @@
     display: block;
 }
 
-/*Capa de color translucido sobre la imagen*/
 .imagen-header::after {
     content: '';
     position: absolute;
@@ -282,7 +267,6 @@
     z-index: 1;
 }
 
-/*Colores especificos por area*/
 .c-pedagogico::after {
     background: rgba(217, 41, 38, 0.7);
 }
@@ -325,7 +309,6 @@
     text-align: center;
 }
 
-/*El texto oculto que baja*/
 .contenido-desplegable {
     background: #f8fafc;
     padding: 0 25px;
@@ -366,23 +349,7 @@
     line-height: 1.4;
 }
 
-@media (max-width: 900px) {
-
-    .fila-3-formacion .card-formacion-hover,
-    .fila-4-formacion .card-formacion-hover {
-        width: calc(50% - 40px);
-    }
-}
-
-@media (max-width: 600px) {
-
-    .fila-3-formacion .card-formacion-hover,
-    .fila-4-formacion .card-formacion-hover {
-        width: 100%;
-    }
-}
-
-/*FAMILIA */
+/* ---FAMILIA--- */
 .fila-equipo {
     display: flex !important;
     flex-direction: row !important;
@@ -462,7 +429,7 @@
     line-height: 1.5;
 }
 
-/* ---Paleta de colores--- */
+/* Paleta Familia */
 .border-rojo {
     border-top-color: #ef4444;
 }
@@ -592,7 +559,7 @@
     letter-spacing: 5px;
 }
 
-/* ---CARRUSEL--- */
+/* ---CARRUSEL ALIANZAS--- */
 .marquee-container {
     width: 100%;
     overflow: hidden;
@@ -631,22 +598,16 @@
     }
 }
 
-/* ---RESPONSIVO--- */
-@media (max-width: 768px) {
-    .glass-box {
-        padding: 20px;
-    }
+/* =======================================================
+   RESPONSIVO (MOVILES Y TABLETS)
+   ======================================================= */
 
-    .titulo-seccion-blanco {
-        font-size: 32px;
-    }
-
-    .card-miembro {
-        margin-top: 30px;
+@media (max-width: 1024px) {
+    .grid-valores {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
-/* ---Familia--- */
 @media (max-width: 1100px) {
 
     .fila-4 .card-miembro,
@@ -655,26 +616,18 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
 
-    .fila-4 .card-miembro,
-    .fila-5 .card-miembro {
+    .fila-3-formacion .card-formacion-hover,
+    .fila-4-formacion .card-formacion-hover {
         width: calc(50% - 20px);
+        min-width: 250px;
     }
 }
 
-@media (max-width: 480px) {
-
-    .fila-4 .card-miembro,
-    .fila-5 .card-miembro {
-        width: 100%;
-    }
-}
-
-/* RESPONSIVO*/
-
-/* ---Hero--- */
 @media (max-width: 768px) {
+
+    /* Hero */
     .hero-quienes {
         background-attachment: scroll;
         height: auto;
@@ -695,10 +648,8 @@
     .glass-box p {
         font-size: 16px;
     }
-}
 
-/* ---Mision y Vision--- */
-@media (max-width: 768px) {
+    /* Mision y Vision */
     .grid-2-col {
         grid-template-columns: 1fr;
         gap: 60px;
@@ -707,10 +658,38 @@
     .card-mision {
         margin-top: 40px;
     }
+
+    /* Familia */
+    .fila-equipo {
+        gap: 60px 20px !important;
+        margin-top: 60px;
+    }
+
+    .fila-4 .card-miembro,
+    .fila-5 .card-miembro {
+        width: calc(50% - 20px);
+    }
+
+    /* Testimonios y Carrusel */
+    .grid-testimonios {
+        grid-template-columns: 1fr;
+    }
+
+    .marquee-track img {
+        width: 90px;
+        height: 90px;
+        margin: 0 20px;
+    }
+
+    .marquee-container h3 {
+        font-size: 22px !important;
+        padding: 0 15px;
+    }
 }
 
-/* ---Valores y Compromisos--- */
 @media (max-width: 600px) {
+
+    /* Valores y Compromisos */
     .grid-valores {
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
@@ -723,20 +702,8 @@
     .grid-compromisos {
         grid-template-columns: 1fr;
     }
-}
 
-/* ---Modelo de formacion detallado--- */
-@media (max-width: 900px) {
-
-    .fila-3-formacion .card-formacion-hover,
-    .fila-4-formacion .card-formacion-hover {
-        width: calc(50% - 20px);
-        min-width: 250px;
-    }
-}
-
-@media (max-width: 600px) {
-
+    /* Formacion */
     .fila-3-formacion .card-formacion-hover,
     .fila-4-formacion .card-formacion-hover {
         width: 100%;
@@ -744,53 +711,12 @@
     }
 }
 
-/* ---Familia--- */
-@media (max-width: 1100px) {
-
-    .fila-4 .card-miembro,
-    .fila-5 .card-miembro {
-        width: calc(33.333% - 20px);
-    }
-}
-
-@media (max-width: 768px) {
-    .fila-equipo {
-        gap: 60px 20px !important;
-        margin-top: 60px;
-    }
-
-    .fila-4 .card-miembro,
-    .fila-5 .card-miembro {
-        width: calc(50% - 20px);
-    }
-}
-
 @media (max-width: 500px) {
 
+    /* Familia Celular */
     .fila-4 .card-miembro,
     .fila-5 .card-miembro {
         width: 100%;
         margin-top: 30px;
-    }
-}
-
-/* ---Testimonios--- */
-@media (max-width: 768px) {
-    .grid-testimonios {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* ---Carrusel--- */
-@media (max-width: 768px) {
-    .marquee-track img {
-        width: 90px;
-        height: 90px;
-        margin: 0 20px;
-    }
-
-    .marquee-container h3 {
-        font-size: 22px !important;
-        padding: 0 15px;
     }
 }
