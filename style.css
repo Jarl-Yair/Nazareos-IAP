@@ -935,12 +935,12 @@ body {
     box-shadow: 0 0 20px rgba(54, 94, 168, 0.8);
 }
 
-.glow-blanco {
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+.glow-negro {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
 }
 
-.glow-gris {
-    box-shadow: 0 0 30px rgba(200, 200, 200, 0.8);
+.glow-blanco {
+    box-shadow: 0 0 30px rgb(254, 253, 253);
 }
 
 .glow-naranja {
@@ -951,8 +951,12 @@ body {
     box-shadow: 0 0 20px rgba(255, 20, 147, 0.7);
 }
 
-.glow-verde {
-    box-shadow: 0 0 20px rgba(50, 205, 50, 0.7);
+.glow-gris {
+    box-shadow: 0 0 20px rgba(88, 95, 88, 0.7);
+}
+
+.glow-verde{
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.966);
 }
 
 .glow-celeste {
@@ -1359,7 +1363,7 @@ body {
     }
 }
 
-/* RESPONSIVE MOBILE */
+/* RESPONSIVE */
 .menu-toggle {
     display: none;
 }

@@ -7,14 +7,12 @@
     <title>Eventos - Nazareos IAP</title>
     <link rel="icon" href="IMG/Icono.webp">
     <link rel="stylesheet" href="style.css">
-
-    <!-- Tipografías (Poppins y Atma para los títulos del evento) -->
+    <link rel="stylesheet" href="Eventos.css">
+    
+    <!--Tipografaas Poppins y Atma para los títulos del evento-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Atma:wght@600;700&family=Poppins:wght@300;400;600;800&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Atma:wght@600;700&family=Poppins:wght@300;400;600;800&display=swap"rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -26,165 +24,11 @@
         gtag('js', new Date());
         gtag('config', 'G-6V5BJV51M9');
     </script>
-
-    <!-- ESTILOS EXCLUSIVOS PARA LA PÁGINA DE EVENTOS -->
-    <style>
-        .eventos-container {
-            max-width: 1100px;
-            margin: 130px auto 60px;
-            /* Margen superior para el header fijo */
-            padding: 0 20px;
-        }
-
-        .titulo-eventos {
-            text-align: center;
-            font-family: 'Atma', cursive;
-            font-size: 60px;
-            color: var(--color-oscuro);
-            margin-bottom: 50px;
-            line-height: 1.2;
-        }
-
-        .split-eventos {
-            display: flex;
-            gap: 60px;
-            align-items: flex-start;
-        }
-
-        .img-evento {
-            flex: 1;
-        }
-
-        .img-evento img {
-            width: 100%;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-            display: block;
-        }
-
-        .form-evento {
-            flex: 1;
-            text-align: center;
-            padding-top: 10px;
-        }
-
-        .form-evento h2 {
-            font-family: 'Atma', cursive;
-            font-size: 38px;
-            color: var(--color-oscuro);
-            margin-bottom: 30px;
-        }
-
-        .input-evento {
-            width: 100%;
-            padding: 16px 20px;
-            margin-bottom: 18px;
-            background-color: #ffedd5;
-            /* Tono pastel naranja/amarillo */
-            border: none;
-            border-radius: 8px;
-            font-family: 'Poppins', sans-serif;
-            font-size: 15px;
-            color: #333;
-            outline: none;
-            transition: box-shadow 0.3s;
-        }
-
-        .input-evento:focus {
-            box-shadow: 0 0 0 3px rgba(244, 157, 57, 0.3);
-        }
-
-        .botones-evento {
-            display: flex;
-            gap: 15px;
-            margin-top: 10px;
-        }
-
-        .btn-evento {
-            flex: 1;
-            background-color: #fef08a;
-            /* Amarillo pastel */
-            color: var(--color-oscuro);
-            padding: 14px;
-            border-radius: 50px;
-            font-weight: 600;
-            text-decoration: none;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s;
-            font-family: 'Poppins', sans-serif;
-            font-size: 15px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .btn-evento:hover {
-            background-color: #fde047;
-            transform: translateY(-2px);
-        }
-
-        .seccion-donar-evento {
-            margin-top: 60px;
-        }
-
-        .seccion-donar-evento h3 {
-            font-family: 'Atma', cursive;
-            font-size: 35px;
-            color: var(--color-oscuro);
-            margin-bottom: 5px;
-        }
-
-        .seccion-donar-evento p {
-            font-family: 'Atma', cursive;
-            font-size: 24px;
-            color: var(--color-oscuro);
-            margin-bottom: 25px;
-            line-height: 1.3;
-        }
-
-        .btn-paypal-evento {
-            background-color: #ffc439;
-            color: #003087;
-            padding: 14px 40px;
-            border-radius: 50px;
-            font-weight: 800;
-            font-size: 18px;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            box-shadow: 0 5px 15px rgba(255, 196, 57, 0.3);
-            transition: transform 0.3s;
-        }
-
-        .btn-paypal-evento:hover {
-            transform: translateY(-3px);
-        }
-
-        /* Responsivo para la página de eventos */
-        @media (max-width: 850px) {
-            .split-eventos {
-                flex-direction: column;
-                gap: 40px;
-            }
-
-            .titulo-eventos {
-                font-size: 45px;
-                margin-bottom: 30px;
-            }
-
-            .botones-evento {
-                flex-direction: column;
-            }
-        }
-    </style>
 </head>
 
 <body style="background-color: var(--color-blanco);">
 
-    <!--HEADER PREMIUM-->
+    <!--HEADER-->
     <header class="header-premium sticky">
         <div class="nav-container">
             <a href="index.html" class="logo-brand">
@@ -217,17 +61,16 @@
         <h1 class="titulo-eventos" data-aos="fade-down">Eventos Próximos</h1>
 
         <div class="split-eventos">
-            <!-- Columna Izquierda: Flyer -->
+            <!-- Columna Izquierda-->
             <div class="img-evento" data-aos="fade-right">
-                <!-- Asegúrate de que la imagen se llame exactamente 'kermes.webp' en tu carpeta IMG -->
                 <img src="IMG/kermes.webp" alt="Kermes Primavera 2025" loading="lazy">
             </div>
 
-            <!-- Columna Derecha: Formulario y PayPal -->
+            <!-- Columna Derecha-->
             <div class="form-evento" data-aos="fade-left">
                 <h2>Confirma tu asistencia</h2>
 
-                <!-- Formulario 100% Funcional con FormSubmit -->
+                <!-- Formulario con FormSubmit -->
                 <form action="https://formsubmit.co/contacto@nazareosiap.org" method="POST">
                     <input type="text" name="Nombre" placeholder="Nombre Completo" required class="input-evento">
                     <input type="tel" name="Telefono" placeholder="Número Telefónico" maxlength="10" required
@@ -240,13 +83,13 @@
 
                     <div class="botones-evento">
                         <button type="submit" class="btn-evento">Enviar</button>
-                        <!-- Botón que descarga/abre el PDF directo -->
+                        <!-- Boton que descarga y abrir el PDF directo -->
                         <a href="MEDIA/Aviso de privacidad CH.pdf" target="_blank" class="btn-evento">Aviso de
                             privacidad</a>
                     </div>
                 </form>
 
-                <!-- Zona de Donación a Distancia -->
+                <!-- Zona de donacion a distancia -->
                 <div class="seccion-donar-evento">
                     <h3>¿No puedes asistir?...</h3>
                     <p>No te preocupes, puedes donar a distancia.</p>
@@ -263,7 +106,7 @@
 
     </main>
 
-    <!--FOOTER PREMIUM-->
+    <!--FOOTER-->
     <footer class="footer-premium">
         <div class="footer-main">
             <!--Columna de informacion-->
@@ -391,7 +234,7 @@
         </div>
     </div>
 
-    <!--Modal Ubicacion-->
+    <!--Modal ubicacion-->
     <div id="modal-ubicacion" class="modal-ventana">
         <div class="modal-contenido">
             <span class="cerrar-modal">&times;</span>
@@ -493,7 +336,7 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <!-- AVISO DE COOKIES (UIVERSE) -->
+    <!-- AVISO DE COOKIES UIVERSE -->
     <div id="aviso-cookies" class="cookie-card">
         <svg class="cookie-icon" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"></path>
