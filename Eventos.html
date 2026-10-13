@@ -211,7 +211,7 @@
         </div>
     </header>
 
-    <!-- ZONA DEL EVENTO (Diseño Limpio Original) -->
+    <!-- ZONA DEL EVENTO -->
     <main class="eventos-container">
 
         <h1 class="titulo-eventos" data-aos="fade-down">Eventos Próximos</h1>
@@ -340,8 +340,9 @@
                     </div>
 
                     <div class="alianzas-centro">
-                        <a href="G.html" target="_blank" class="alianza-logo alianza-principal glow-gris"><img
-                                src="IMG/GC22.webp" loading="lazy" alt="GC Grupo CEMSA"></a>
+                        <a href="http://www.cemsamx.com/G.html" target="_blank"
+                            class="alianza-logo alianza-principal glow-gris"><img src="IMG/GC22.webp" loading="lazy"
+                                alt="GC Grupo CEMSA"></a>
                     </div>
 
                     <div class="alianzas-bloque">
@@ -492,14 +493,23 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <!-- AVISO DE COOKIES -->
-    <div id="aviso-cookies" class="aviso-cookies">
-        <div class="cookies-texto">
-            Utilizamos cookies propias y de terceros para mejorar tu experiencia y analizar el tráfico de nuestro sitio.
-            Al continuar navegando, aceptas nuestra <a href="MEDIA/Aviso de privacidad CH.pdf" target="_blank">Política
-                de Privacidad</a>.
+    <!-- AVISO DE COOKIES (UIVERSE) -->
+    <div id="aviso-cookies" class="cookie-card">
+        <svg class="cookie-icon" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"></path>
+            <path d="M8.5 8.5v.01"></path>
+            <path d="M16 15.5v.01"></path>
+            <path d="M12 12v.01"></path>
+            <path d="M11 17v.01"></path>
+            <path d="M7 14v.01"></path>
+        </svg>
+        <span class="cookie-title">Uso de cookies</span>
+        <p class="cookie-desc">Utilizamos cookies para mejorar tu experiencia y analizar el tráfico de nuestro sitio.
+            Conoce nuestra <a href="MEDIA/Aviso de privacidad CH.pdf" target="_blank">Política de Privacidad</a>.</p>
+        <div class="cookie-actions">
+            <button id="btn-aceptar-cookies" class="cookie-btn btn-allow">Aceptar</button>
+            <button id="btn-rechazar-cookies" class="cookie-btn btn-decline">Rechazar</button>
         </div>
-        <button id="btn-aceptar-cookies" class="btn-aceptar-cookies">Entendido</button>
     </div>
 
     <!-- SCRIPTS -->
@@ -555,17 +565,19 @@
             // COOKIES
             const avisoCookies = document.getElementById('aviso-cookies');
             const btnAceptar = document.getElementById('btn-aceptar-cookies');
+            const btnRechazar = document.getElementById('btn-rechazar-cookies');
 
             if (!localStorage.getItem('cookies_aceptadas')) {
                 setTimeout(() => avisoCookies.classList.add('mostrar'), 1000);
             }
 
-            if (btnAceptar) {
-                btnAceptar.addEventListener('click', () => {
-                    avisoCookies.classList.remove('mostrar');
-                    localStorage.setItem('cookies_aceptadas', 'true');
-                });
-            }
+            const ocultarCookies = () => {
+                avisoCookies.classList.remove('mostrar');
+                localStorage.setItem('cookies_aceptadas', 'true');
+            };
+
+            if (btnAceptar) btnAceptar.addEventListener('click', ocultarCookies);
+            if (btnRechazar) btnRechazar.addEventListener('click', ocultarCookies);
         });
     </script>
 </body>

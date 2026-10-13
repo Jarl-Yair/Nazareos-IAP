@@ -18,7 +18,7 @@
     <!--Animaciones AOS-->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <!--Google Analytics (gtag.js)-->
+    <!--Google Analytics-->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6V5BJV51M9"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -116,7 +116,7 @@
             <div class="cards-apoyo">
                 <!--Tarjeta 1-->
                 <div class="card-premium" data-aos="fade-right" data-aos-delay="100">
-                    <div class="card-img">
+                    <div class="card-img" style="background-color: var(--color-blanco);">
                         <img src="IMG/Económica.webp" alt="Apoyo Económico" loading="lazy">
                     </div>
                     <div class="card-body">
@@ -128,7 +128,7 @@
 
                 <!--Tarjeta 2-->
                 <div class="card-premium" data-aos="fade-left" data-aos-delay="300">
-                    <div class="card-img">
+                    <div class="card-img" style="background-color: var(--color-blanco);">
                         <img src="IMG/Despensa.webp" alt="Despensa y Jarcería" loading="lazy">
                     </div>
                     <div class="card-body">
@@ -140,8 +140,8 @@
 
                 <!--Tarjeta 3-->
                 <div class="card-premium" data-aos="fade-up" data-aos-delay="500">
-                    <div class="card-img">
-                        <img src="IMG" alt="Eventos" loading="lazy">
+                    <div class="card-img" style="background-color: var(--color-blanco);">
+                        <img src="IMG/kermes.webp" alt="Eventos" loading="lazy">
                     </div>
                     <div class="card-body">
                         <h3>Eventos</h3>
@@ -262,6 +262,15 @@
                     <input type="tel" name="Telefono" placeholder="Ingresa tu teléfono" maxlength="10" required>
                     <input type="hidden" name="_captcha" value="false">
                     <button type="submit" class="btn-naranja-pill btn-full">Enviar</button>
+
+                    <!-- Checkbox alineado correctamente -->
+                    <div class="checkbox-privacidad">
+                        <input type="checkbox" required id="terminos-suscripcion">
+                        <label for="terminos-suscripcion">
+                            Acepto el tratamiento de mis datos conforme al <a href="MEDIA/Aviso de privacidad CH.pdf"
+                                target="_blank">Aviso de Privacidad</a>.
+                        </label>
+                    </div>
                 </form>
             </div>
         </div>
@@ -330,54 +339,51 @@
             </div>
         </div>
 
-       <div class="footer-col alianzas-col">    
-                <h4>NUESTRO GRUPO Y ALIANZAS</h4>
-                <div class="red-alianzas">
-                    <div class="alianzas-fila-superior">
-                        <div class="alianzas-bloque">
-                            <a href="https://www.facebook.com/TiendasUrbanCoatings" target="_blank"
-                                class="alianza-logo glow-rojo"><img src="IMG/B1.webp" loading="lazy" alt="Urban"></a>
-                            <a href="https://www.facebook.com/CEMSA-Recubrimientos-103351411241119" target="_blank"
-                                class="alianza-logo glow-azul"><img src="IMG/B2.webp" loading="lazy" alt="CEMSA"></a>
-                            <a href="https://www.facebook.com/jarlserv?mibextid=ZbWKwL" target="_blank"
-                                class="alianza-logo glow-blanco"><img src="IMG/B3.webp" loading="lazy" alt="Jarl"></a>
-                        </div>
-
-                        <div class="alianzas-centro">
-                            <a href="G.html" target="_blank" class="alianza-logo alianza-principal glow-gris"><img
-                                    src="IMG/GC22.webp" loading="lazy" alt="GC Grupo CEMSA"></a>
-                        </div>
-
-                        <div class="alianzas-bloque">
-                            <a href="https://www.facebook.com/nazareosiap/?mibextid=ZbWKwL" target="_blank"
-                                class="alianza-logo glow-naranja"><img src="IMG/B4.webp" loading="lazy" alt="Nazareos"></a>
-                            <a href="https://www.facebook.com/nazareosac1" target="_blank"
-                                class="alianza-logo glow-rosa"><img src="IMG/B5.webp" loading="lazy" alt="Nazareos AC"></a>
-                            <a href="https://www.facebook.com/profile.php?id=100068549594726" target="_blank"
-                                class="alianza-logo glow-verde"><img src="IMG/B6.webp" loading="lazy" alt="E&C"></a>
-                        </div>
+        <!-- Alianzas Estilo CEMSA -->
+        <div class="footer-col alianzas-col">
+            <h4>NUESTRO GRUPO Y ALIANZAS</h4>
+            <div class="red-alianzas">
+                <div class="alianzas-fila-superior">
+                    <div class="alianzas-bloque">
+                        <a href="https://www.facebook.com/TiendasUrbanCoatings" target="_blank"
+                            class="alianza-logo glow-rojo"><img src="IMG/B1.webp" loading="lazy" alt="Urban"></a>
+                        <a href="https://www.facebook.com/CEMSA-Recubrimientos-103351411241119" target="_blank"
+                            class="alianza-logo glow-azul"><img src="IMG/B2.webp" loading="lazy" alt="CEMSA"></a>
+                        <a href="https://www.facebook.com/jarlserv?mibextid=ZbWKwL" target="_blank"
+                            class="alianza-logo glow-blanco"><img src="IMG/B3.webp" loading="lazy" alt="Jarl"></a>
                     </div>
-
-                    <div class="alianzas-fila-inferior">
-                        <a href="https://www.facebook.com/EPP-107946225493285" target="_blank"
-                            class="alianza-logo glow-amarillo"><img src="IMG/B7.webp" loading="lazy" alt="EPP"></a>
-                        <a href="https://www.facebook.com/KumonSanJuanTultepec" target="_blank"
-                            class="alianza-logo glow-celeste"><img src="IMG/B8.webp" loading="lazy" alt="Kumon"></a>
-                        <a href="https://www.facebook.com/profile.php?id=61572248146579" target="_blank"
-                            class="alianza-logo glow-cian"><img src="IMG/Spacioss.png" loading="lazy" alt="Spacioss"></a>
+                    <div class="alianzas-centro">
+                        <a href="http://www.cemsamx.com/G.html" target="_blank"
+                            class="alianza-logo alianza-principal glow-gris"><img src="IMG/GC22.webp" loading="lazy"
+                                alt="GC Grupo CEMSA"></a>
                     </div>
+                    <div class="alianzas-bloque">
+                        <a href="https://www.facebook.com/nazareosiap/?mibextid=ZbWKwL" target="_blank"
+                            class="alianza-logo glow-naranja"><img src="IMG/B4.webp" loading="lazy" alt="Nazareos"></a>
+                        <a href="https://www.facebook.com/nazareosac1" target="_blank"
+                            class="alianza-logo glow-rosa"><img src="IMG/B5.webp" loading="lazy" alt="Nazareos AC"></a>
+                        <a href="https://www.facebook.com/profile.php?id=100068549594726" target="_blank"
+                            class="alianza-logo glow-verde"><img src="IMG/B6.webp" loading="lazy" alt="E&C"></a>
+                    </div>
+                </div>
+                <div class="alianzas-fila-inferior">
+                    <a href="https://www.facebook.com/EPP-107946225493285" target="_blank"
+                        class="alianza-logo glow-amarillo"><img src="IMG/B7.webp" loading="lazy" alt="EPP"></a>
+                    <a href="https://www.facebook.com/KumonSanJuanTultepec" target="_blank"
+                        class="alianza-logo glow-celeste"><img src="IMG/B8.webp" loading="lazy" alt="Kumon"></a>
+                    <a href="https://www.facebook.com/profile.php?id=61572248146579" target="_blank"
+                        class="alianza-logo glow-cian"><img src="IMG/Spacioss.png" loading="lazy" alt="Spacioss"></a>
                 </div>
             </div>
         </div>
 
-        <!--Creditos-->
         <div class="footer-creditos">
             <p>© Designed by: <b>Ing. Yair Maldonado / Lic. Karen Moreno / Lic. Montserrat Vazquez</b> - <a
                     href="http://www.jarl.com.mx" target="_blank">NAZAREOS IAP</a> - Todos los Derechos Reservados.</p>
         </div>
     </footer>
 
-    <!--ZONA DE MODALES-->
+    <!--ZONA DE MODALES GLOBALES-->
     <!--MODAL ESCRIBENOS -->
     <div id="modal-escribenos" class="modal-ventana">
         <div class="modal-contenido">
@@ -398,6 +404,15 @@
                 <input type="text" name="Texto" placeholder="Comentario y/o Asunto diferente" required>
                 <input type="hidden" name="_captcha" value="false">
                 <button type="submit" class="btn-naranja-pill btn-full mt-3">Enviar Mensaje</button>
+
+                <!-- Checkbox alineado correctamente -->
+                <div class="checkbox-privacidad">
+                    <input type="checkbox" required id="terminos-modal">
+                    <label for="terminos-modal">
+                        Acepto el tratamiento de mis datos conforme al <a href="MEDIA/Aviso de privacidad CH.pdf"
+                            target="_blank">Aviso de Privacidad</a>.
+                    </label>
+                </div>
             </form>
         </div>
     </div>
@@ -409,7 +424,7 @@
             <h2 class="titulo-modal">Porta voz</h2>
             <h3 class="pregunta-modal text-center">Acción social</h3>
             <div class="portavoz-img-container">
-                <img src="./IMG/Juanca.webp" alt="Juanca, Porta voz" loading="lazy">
+                <img src="IMG/Juanca.webp" alt="Juanca, Porta voz" loading="lazy">
             </div>
             <a href="https://api.whatsapp.com/send?phone=5618678811&text=Buen dia,%20quisiera%20recibir%20mas%20información%20por%20favor%20👋"
                 target="_blank" class="btn-naranja-pill btn-whatsapp-verde">
@@ -524,24 +539,41 @@
                     <option value="Transparencia">Informe de Transparencia</option>
                 </select>
                 <button type="submit" class="btn-naranja-pill btn-enviar-form">Enviar</button>
+
+                <div class="checkbox-privacidad">
+                    <input type="checkbox" required id="terminos-transparencia">
+                    <label for="terminos-transparencia">
+                        Acepto el tratamiento de mis datos conforme al <a href="MEDIA/Aviso de privacidad CH.pdf"
+                            target="_blank">Aviso de Privacidad</a>.
+                    </label>
+                </div>
             </form>
         </div>
     </div>
 
-    <!-- BOTON DE WHATSAPP FLOTANTE -->
+    <!-- BOTON WHATSAPP FLOTANTE -->
     <a href="https://api.whatsapp.com/send?phone=5618678811&text=¡Hola!%20Me%20gustaría%20recibir%20más%20información%20sobre%20Casa%20Hogar%20Nazareos"
         class="btn-whatsapp-flotante" target="_blank" aria-label="Chat en WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <!-- AVISO DE COOKIES -->
-    <div id="aviso-cookies" class="aviso-cookies">
-        <div class="cookies-texto">
-            Utilizamos cookies propias y de terceros para mejorar tu experiencia y analizar el tráfico de nuestro sitio.
-            Al continuar navegando, aceptas nuestra <a href="#" class="abrir-modal"
-                data-modal="modal-privacidad">Política de Privacidad</a>.
+    <!-- AVISO DE COOKIES (UIVERSE) -->
+    <div id="aviso-cookies" class="cookie-card">
+        <svg class="cookie-icon" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"></path>
+            <path d="M8.5 8.5v.01"></path>
+            <path d="M16 15.5v.01"></path>
+            <path d="M12 12v.01"></path>
+            <path d="M11 17v.01"></path>
+            <path d="M7 14v.01"></path>
+        </svg>
+        <span class="cookie-title">Uso de cookies</span>
+        <p class="cookie-desc">Utilizamos cookies para mejorar tu experiencia y analizar el tráfico de nuestro sitio.
+            Conoce nuestra <a href="MEDIA/Aviso de privacidad CH.pdf" target="_blank">Política de Privacidad</a>.</p>
+        <div class="cookie-actions">
+            <button id="btn-aceptar-cookies" class="cookie-btn btn-allow">Aceptar</button>
+            <button id="btn-rechazar-cookies" class="cookie-btn btn-decline">Rechazar</button>
         </div>
-        <button id="btn-aceptar-cookies" class="btn-aceptar-cookies">Entendido</button>
     </div>
 
     <!--SCRIPTS LIMPIOS Y CONSOLIDADOS -->
@@ -612,17 +644,19 @@
             // 4. COOKIES
             const avisoCookies = document.getElementById('aviso-cookies');
             const btnAceptar = document.getElementById('btn-aceptar-cookies');
+            const btnRechazar = document.getElementById('btn-rechazar-cookies');
 
             if (!localStorage.getItem('cookies_aceptadas')) {
                 setTimeout(() => avisoCookies.classList.add('mostrar'), 1000);
             }
 
-            if (btnAceptar) {
-                btnAceptar.addEventListener('click', () => {
-                    avisoCookies.classList.remove('mostrar');
-                    localStorage.setItem('cookies_aceptadas', 'true');
-                });
-            }
+            const ocultarCookies = () => {
+                avisoCookies.classList.remove('mostrar');
+                localStorage.setItem('cookies_aceptadas', 'true');
+            };
+
+            if (btnAceptar) btnAceptar.addEventListener('click', ocultarCookies);
+            if (btnRechazar) btnRechazar.addEventListener('click', ocultarCookies);
         });
     </script>
 </body>

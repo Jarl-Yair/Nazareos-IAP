@@ -23,7 +23,7 @@ body {
     max-width: 100vw;
 }
 
-/*HEADER*/
+/* HEADER */
 .header-premium {
     position: fixed;
     top: 0;
@@ -147,7 +147,7 @@ body {
     }
 }
 
-/*HERO*/
+/* HERO */
 .hero-premium {
     position: relative;
     width: 100%;
@@ -249,7 +249,7 @@ body {
     transform: translateY(-3px);
 }
 
-/*UTILIDADES*/
+/* UTILIDADES */
 .contenedor-premium {
     max-width: 1200px;
     margin: 0 auto;
@@ -280,7 +280,7 @@ body {
     color: var(--color-oscuro);
 }
 
-/*GALERIA*/
+/* GALERIA */
 .seccion-familia {
     background-color: var(--color-blanco);
 }
@@ -313,7 +313,7 @@ body {
     transform: scale(1.08);
 }
 
-/*RED DE APOYO*/
+/* RED DE APOYO */
 .seccion-apoyo {
     position: relative;
 }
@@ -387,7 +387,7 @@ body {
     color: var(--color-blanco);
 }
 
-/*VOLUNTARIADO*/
+/* VOLUNTARIADO */
 .seccion-voluntariado {
     background-color: #2b78c5;
     color: var(--color-blanco);
@@ -431,7 +431,7 @@ body {
     filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.3));
 }
 
-/*MODELO DE FORMACIÓN*/
+/* MODELO DE FORMACIÓN */
 .bg-gris {
     background-color: var(--color-gris);
 }
@@ -532,7 +532,7 @@ body {
     background-color: #e67d7a;
 }
 
-/*AUTORIDADES REGULATORIAS*/
+/* AUTORIDADES REGULATORIAS */
 .text-center {
     text-align: center;
 }
@@ -559,7 +559,7 @@ body {
     transform: translateY(-10px) scale(1.05);
 }
 
-/*VISITANOS*/
+/* VISITANOS */
 .seccion-visitanos-split {
     display: flex;
     flex-wrap: wrap;
@@ -621,7 +621,7 @@ body {
     color: #3aafc7;
 }
 
-/* ---POST-IT DE SUSCRIPCION--- */
+/* POST-IT DE SUSCRIPCION */
 .post-it-suscripcion {
     background: #fef9c3;
     padding: 40px 30px 30px;
@@ -663,7 +663,7 @@ body {
     color: var(--color-primario);
 }
 
-/* ---FORMULARIOS--- */
+/* FORMULARIOS */
 .form-premium input,
 .form-premium select,
 .form-premium textarea {
@@ -709,23 +709,36 @@ body {
     margin-bottom: 25px;
 }
 
-@media (max-width: 900px) {
-
-    .visitanos-img-col,
-    .visitanos-content-col {
-        flex: 1 1 100%;
-    }
-
-    .visitanos-img-col {
-        min-height: 300px;
-    }
-
-    .visitanos-content-col {
-        padding: 40px 5%;
-    }
+/* CHECKBOX PRIVACIDAD */
+.checkbox-privacidad {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 15px;
+    text-align: left;
 }
 
-/*FOOTER Y ALIANZAS*/
+.checkbox-privacidad input[type="checkbox"] {
+    width: auto !important;
+    margin-bottom: 0 !important;
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+.checkbox-privacidad label {
+    font-size: 12px;
+    color: var(--color-oscuro);
+    font-weight: normal;
+    line-height: 1.4;
+}
+
+.checkbox-privacidad label a {
+    color: var(--color-primario);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* FOOTER Y ALIANZAS CEMSA */
 .footer-premium {
     background-color: var(--color-blanco);
     border-top: 4px solid var(--color-naranja-claro);
@@ -790,7 +803,6 @@ body {
     text-align: center;
 }
 
-/*Redes Sociales*/
 .footer-social {
     display: flex;
     gap: 15px;
@@ -829,7 +841,6 @@ body {
     transform: translateY(-5px);
 }
 
-/*Boton de donar footer*/
 .btn-donar-footer {
     display: inline-block;
     background-color: #f49d39;
@@ -849,9 +860,14 @@ body {
     transform: translateY(-3px);
 }
 
-/* ESTILO DE LOS GLOBOS */
+/* ESTILO CEMSA PARA ALIANZAS */
 .alianzas-col {
     text-align: center;
+}
+
+.alianzas-col h4::after {
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .red-alianzas {
@@ -960,7 +976,7 @@ body {
     text-decoration: none;
 }
 
-/*MODALES*/
+/* MODALES */
 .modal-ventana {
     display: none;
     position: fixed;
@@ -970,7 +986,6 @@ body {
     height: 100vh;
     background-color: rgba(15, 23, 42, 0.7);
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     z-index: 9999;
     justify-content: center;
     align-items: center;
@@ -1079,69 +1094,7 @@ body {
     line-height: 1.7;
 }
 
-/* ---FORMULARIO--- */
-.formulario-original {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    margin-top: 30px;
-}
-
-.formulario-original input,
-.formulario-original select {
-    width: 100%;
-    padding: 16px 20px;
-    border-radius: 12px;
-    border: 2px solid #e2e8f0;
-    background-color: #f8fafc;
-    font-family: var(--font-principal);
-    font-size: 15px;
-    color: #334155;
-    transition: all 0.3s ease;
-    outline: none;
-}
-
-.formulario-original input:focus,
-.formulario-original select:focus {
-    border-color: var(--color-primario);
-    background-color: var(--color-blanco);
-    box-shadow: 0 0 0 4px rgba(244, 157, 57, 0.15);
-}
-
-.formulario-original select {
-    cursor: pointer;
-    appearance: none;
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-    background-repeat: no-repeat;
-    background-position: right 15px center;
-    background-size: 16px;
-}
-
-.btn-naranja-pill {
-    background-color: var(--color-primario);
-    color: var(--color-blanco);
-    padding: 16px 32px;
-    font-size: 16px;
-    font-weight: 600;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    font-family: var(--font-principal);
-    box-shadow: 0 10px 20px -5px rgba(244, 157, 57, 0.4);
-    transition: all 0.3s ease;
-}
-
-.btn-naranja-pill:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 25px -5px rgba(244, 157, 57, 0.5);
-    background-color: #e08b2c;
-}
-
-.btn-enviar-form {
-    margin-top: 10px;
-}
-
-/*MODALES DE CONTACTO*/
+/* MODALES DE CONTACTO */
 .portavoz-img-container {
     margin: 30px 0;
 }
@@ -1256,6 +1209,124 @@ body {
     color: var(--color-blanco);
 }
 
+/* BOTON WHATSAPP FLOTANTE Y COOKIES */
+.btn-whatsapp-flotante {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+    z-index: 1000;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-whatsapp-flotante:hover {
+    background-color: #128c7e;
+    transform: scale(1.1);
+    color: #FFF;
+}
+
+.cookie-card {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    width: 320px;
+    background-color: var(--color-blanco);
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    padding: 25px;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transform: translateY(150%);
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    font-family: var(--font-principal);
+}
+
+.cookie-card.mostrar {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.cookie-icon {
+    width: 45px;
+    height: 45px;
+    fill: none;
+    stroke: var(--color-oscuro);
+    margin: 0 auto;
+    display: block;
+}
+
+.cookie-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--color-oscuro);
+    text-align: center;
+}
+
+.cookie-desc {
+    font-size: 13px;
+    color: #555;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.cookie-desc a {
+    color: var(--color-primario);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.cookie-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.cookie-btn {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+}
+
+.btn-allow {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+}
+
+.btn-allow:hover {
+    background-color: #e08b2c;
+    transform: translateY(-2px);
+}
+
+.btn-decline {
+    background-color: #e2e8f0;
+    color: #475569;
+}
+
+.btn-decline:hover {
+    background-color: #cbd5e1;
+    transform: translateY(-2px);
+}
+
+/* RESPONSIVE DESKTOP */
 @media (min-width: 768px) {
     .split-layout {
         flex-direction: row;
@@ -1288,7 +1359,7 @@ body {
     }
 }
 
-/* RESPONSIVE*/
+/* RESPONSIVE MOBILE */
 .menu-toggle {
     display: none;
 }
@@ -1298,8 +1369,6 @@ body {
 }
 
 @media (max-width: 950px) {
-
-    /* --- HEADER Y NAVEGACION --- */
     .menu-toggle {
         display: block;
         font-size: 30px;
@@ -1354,7 +1423,6 @@ body {
         width: auto !important;
     }
 
-    /* --- HERO --- */
     .hero-premium {
         background-attachment: scroll;
     }
@@ -1382,7 +1450,6 @@ body {
         box-sizing: border-box;
     }
 
-    /* --- AJUSTES GENERALES A 1 COLUMNA --- */
     .contenedor-premium {
         padding: 50px 20px;
     }
@@ -1418,7 +1485,6 @@ body {
         height: 180px;
     }
 
-    /* --- PANTALLAS DIVIDIDAS--- */
     .split-layout {
         flex-direction: column;
         text-align: center;
@@ -1447,19 +1513,17 @@ body {
         padding: 50px 20px;
     }
 
-    /* --- POST-IT--- */
     .post-it-suscripcion {
-        transform: rotate(0deg);
+        transform: rotate(0deg) !important;
         max-width: 100%;
         padding: 30px 20px;
         box-sizing: border-box;
     }
 
     .post-it-suscripcion .cinta-adhesiva {
-        transform: translateX(-50%) rotate(0deg);
+        transform: translateX(-50%) rotate(0deg) !important;
     }
 
-    /* --- FOOTER --- */
     .footer-main {
         grid-template-columns: 1fr;
         text-align: center;
@@ -1476,94 +1540,34 @@ body {
     }
 }
 
-/* BOTON WHATSAPP FLOTANTE*/
-.btn-whatsapp-flotante {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 30px;
-    right: 30px;
-    background-color: #25d366;
-    color: #FFF;
-    border-radius: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 35px;
-    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
-    z-index: 1000;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.btn-whatsapp-flotante:hover {
-    background-color: #128c7e;
-    transform: scale(1.1);
-    color: #FFF;
-}
-
-/*AVISO DE COOKIES*/
-.aviso-cookies {
-    position: fixed;
-    bottom: -100px;
-    left: 0;
-    width: 100%;
-    background-color: rgba(26, 26, 26, 0.95);
-    backdrop-filter: blur(10px);
-    color: var(--color-blanco);
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 2000;
-    transform: translateY(150%);
-    transition: bottom 0.5s ease;
-    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
-}
-
-.aviso-cookies.mostrar {
-    bottom: 0;
-}
-
-.cookies-texto {
-    font-size: 14px;
-    max-width: 80%;
-    line-height: 1.5;
-}
-
-.cookies-texto a {
-    color: var(--color-primario);
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.btn-aceptar-cookies {
-    background-color: var(--color-primario);
-    color: var(--color-blanco);
-    border: none;
-    padding: 10px 25px;
-    border-radius: 50px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: background 0.3s;
-}
-
-.btn-aceptar-cookies:hover {
-    background-color: #e08b2c;
-}
-
 @media (max-width: 768px) {
-    .aviso-cookies {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-        padding: 15px;
+
+    .visitanos-img-col,
+    .visitanos-content-col {
+        flex: 1 1 100%;
     }
 
-    .cookies-texto {
-        max-width: 100%;
-        font-size: 12px;
+    .visitanos-img-col {
+        min-height: 300px;
     }
+
+    .visitanos-content-col {
+        padding: 40px 5%;
+    }
+
+    .cookie-card {
+        bottom: 20px;
+        left: 50%;
+        transform: translate(-50%, 150%);
+        width: 90%;
+        max-width: 350px;
+        padding: 20px;
+    }
+
+    .cookie-card.mostrar {
+        transform: translate(-50%, 0);
+    }
+
 
     .btn-whatsapp-flotante {
         width: 50px;
@@ -1572,107 +1576,50 @@ body {
         bottom: 20px;
         right: 20px;
     }
-}
 
-@media (max-width: 768px) {
-
-    /* ESTILO DE LOS GLOBOS */
-    .alianzas-col {
-        text-align: center;
-    }
-
-    .red-alianzas {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .footer-alianzas {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         gap: 15px;
-        margin-top: 30px;
-        margin-bottom: 50px;
+        justify-items: center;
+        align-items: center;
+        padding: 40px 10px;
     }
 
+    .footer-alianzas img {
+        width: 65px;
+        height: 65px;
+        filter: grayscale(0%);
+        opacity: 1;
+    }
+
+    /* Footer Alianzas CEMSA - Móvil */
     .alianzas-fila-superior {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 30px;
+        flex-direction: column;
+        gap: 20px;
     }
 
     .alianzas-bloque {
         display: flex;
+        justify-content: center;
         gap: 20px;
     }
 
     .alianzas-fila-inferior {
         display: flex;
         justify-content: center;
-        gap: 25px;
-    }
-
-    .alianza-logo {
-        display: inline-block;
-        border-radius: 50%;
-        overflow: hidden;
-        background-color: #fff;
-        transition: transform 0.3s ease, filter 0.3s ease;
-    }
-
-    .alianza-logo img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        padding: 10px;
-    }
-
-    .alianza-logo:hover {
-        transform: scale(1.15);
-        z-index: 10;
+        gap: 20px;
+        flex-wrap: wrap;
     }
 
     .alianza-principal {
-        width: 110px;
-        height: 110px;
+        width: 100px;
+        height: 100px;
     }
 
     .alianza-logo:not(.alianza-principal) {
-        width: 65px;
-        height: 65px;
+        width: 55px;
+        height: 55px;
     }
-
-    /* ESTILO CEMSA PARA ALIANZAS EN FON  */
-    .glow-rojo {
-        box-shadow: 0 0 20px rgba(255, 50, 50, 0.7);
-    }
-
-    .glow-azul {
-        box-shadow: 0 0 20px rgba(54, 94, 168, 0.8);
-    }
-
-    .glow-blanco {
-        box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
-    }
-
-    .glow-gris {
-        box-shadow: 0 0 30px rgba(200, 200, 200, 0.8);
-    }
-
-    .glow-naranja {
-        box-shadow: 0 0 20px rgba(255, 140, 0, 0.8);
-    }
-
-    .glow-rosa {
-        box-shadow: 0 0 20px rgba(255, 20, 147, 0.7);
-    }
-
-    .glow-verde {
-        box-shadow: 0 0 20px rgba(50, 205, 50, 0.7);
-    }
-
-    .glow-celeste {
-        box-shadow: 0 0 20px rgba(135, 206, 235, 0.8);
-    }
-
-    .glow-cian {
-        box-shadow: 0 0 20px rgba(0, 255, 255, 0.7);
-    }
-
 }

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="Sumate.css">
 
-    <!--Tipografia Poppins Optimizada-->
+    <!-- Tipografia Poppins Optimizada -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <!--Google Analytics-->
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6V5BJV51M9"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -29,7 +29,7 @@
 
 <body>
 
-    <!--HEADER-->
+    <!-- HEADER -->
     <header class="header-premium">
         <div class="nav-container">
             <a href="index.html" class="logo-brand">
@@ -56,9 +56,9 @@
         </div>
     </header>
 
-    <!--HERO ANIMADO -->
+    <!-- HERO ANIMADO -->
     <section class="hero-slider">
-        <!-- 1. El fondo animado -->
+        <!-- El fondo animado -->
         <div class="slider-bg">
             <div class="slide" style="background-image: url('IMG/');"></div>
             <div class="slide" style="background-image: url('IMG/');"></div>
@@ -66,12 +66,11 @@
             <div class="slide" style="background-image: url('IMG/');"></div>
         </div>
 
-        <!-- 2. Capa oscura para que resalte el texto -->
+        <!-- Capa oscura para que resalte el texto -->
         <div class="hero-overlay"></div>
 
-        <!-- 3. Los textos sincronizados con las imagenes -->
+        <!-- Textos sincronizados -->
         <div class="hero-text-container">
-            <!-- Texto 1 -->
             <div class="text-slide">
                 <div class="glass-box">
                     <h1 class="titulo-hero-sumate">¡Gracias por lo que tenemos!</h1>
@@ -79,7 +78,6 @@
                         pequeños.</p>
                 </div>
             </div>
-            <!-- Texto 2 -->
             <div class="text-slide">
                 <div class="glass-box">
                     <h1 class="titulo-hero-sumate">Alimentando esperanzas</h1>
@@ -87,7 +85,6 @@
                         hogar.</p>
                 </div>
             </div>
-            <!-- Texto 3 -->
             <div class="text-slide">
                 <div class="glass-box">
                     <h1 class="titulo-hero-sumate">Formación integral</h1>
@@ -95,7 +92,6 @@
                         seres humanos.</p>
                 </div>
             </div>
-            <!-- Texto 4 -->
             <div class="text-slide">
                 <div class="glass-box">
                     <h1 class="titulo-hero-sumate">Sé un héroe hoy</h1>
@@ -106,7 +102,7 @@
         </div>
     </section>
 
-    <!--RED DE VOLUNTARIOS-->
+    <!-- RED DE VOLUNTARIOS -->
     <section class="seccion-voluntarios bg-gris">
         <div class="contenedor-premium">
             <div class="titulo-seccion" data-aos="fade-up">
@@ -167,7 +163,7 @@
         </div>
     </section>
 
-    <!--CUBO 3D QUE GIRA-->
+    <!-- CUBO 3D QUE GIRA -->
     <section class="seccion-cubo">
         <div class="contenedor-premium text-center">
             <h2 class="subtitulo-cubo" data-aos="fade-up">Recuerda que...</h2>
@@ -183,17 +179,66 @@
         </div>
     </section>
 
-    <!-- NUBE DE PALABRAS -->
-    <section class="seccion-nube-full" data-aos="fade-up">
-        <img src="IMG/Donaciones.webp" alt="Nube de palabras donaciones" class="img-nube-full" loading="lazy">
-    </section>
+    <!-- CARDS UIVERSE -->
+    <div class="cards-container">
+        <!-- 1. Alimentos -->
+        <div class="card"
+            style="--bg-img: url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D'); --hover-color: #8da4bc;">
+            <span class="default-text">DONAR</span>
+            <div class="hover-content">
+                <h3>Alimentos</h3>
+                <p>Arroz, frijol, azúcar, aceite, leche, cereales y enlatados.</p>
+            </div>
+        </div>
 
-    <!--DONACION Y PAYPAL-->
+        <!-- 2. Aseo Personal -->
+        <div class="card"
+            style="--bg-img: url('https://images.unsplash.com/photo-1583947215259-38e31be8751f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D'); --hover-color: #b3d48d;">
+            <span class="default-text">DONAR</span>
+            <div class="hover-content">
+                <h3>Aseo Personal</h3>
+                <p>Shampoo, jabón corporal, pasta dental, cepillos y papel higiénico.</p>
+            </div>
+        </div>
+
+        <!-- 3. Jarcería -->
+        <div class="card"
+            style="--bg-img: url('https://plus.unsplash.com/premium_photo-1679920025550-75324e59680f?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D'); --hover-color: #fce883;">
+            <span class="default-text">DONAR</span>
+            <div class="hover-content">
+                <h3>Jarcería</h3>
+                <p>Cloro, detergente, escobas, trapeadores y bolsas de basura.</p>
+            </div>
+        </div>
+
+        <!-- 4. Papelería -->
+        <div class="card"
+            style="--bg-img: url('https://images.unsplash.com/photo-1654931800100-2ecf6eee7c64?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D'); --hover-color: #fcb677;">
+            <span class="default-text">DONAR</span>
+            <div class="hover-content">
+                <h3>Papelería</h3>
+                <p>Cuadernos, lápices, colores, pegamento y hojas blancas.</p>
+            </div>
+        </div>
+
+        <!-- 5. Ropa y Juguetes -->
+        <div class="card"
+            style="--bg-img: url('https://images.unsplash.com/photo-1559454403-b8fb88521f11?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D'); --hover-color: #e67d7a;">
+            <span class="default-text">DONAR</span>
+            <div class="hover-content">
+                <h3>Ropa y Juguetes</h3>
+                <p>Prendas en buen estado, tenis y juguetes que no requieran baterías.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- DONACION Y PAYPAL -->
     <section id="donacion-paypal" class="seccion-donacion bg-gris">
         <div class="contenedor-premium">
             <div class="grid-donacion">
 
-                <!--Columna izquierda de tarjeta de deduccion-->
+                <!-- Columna izquierda -->
                 <div class="info-deducible" data-aos="fade-right">
                     <div class="post-it-premium">
                         <div class="cinta-adhesiva"></div>
@@ -206,14 +251,13 @@
                         </div>
                         <p class="agradecimiento">Agradecemos tu continua generosidad y apoyo a nuestra causa.</p>
 
-                        <!-- Boton para abrir modal de recibos -->
                         <a href="#" class="btn-recibos abrir-modal" data-modal="modal-recibos">
                             <i class="fa-solid fa-file-invoice"></i> Requisitos para recibo
                         </a>
                     </div>
                 </div>
 
-                <!--Columna derecha de tarjeta BBVA y PayPal-->
+                <!-- Columna derecha -->
                 <div class="paypal-container" data-aos="fade-left">
                     <div class="tarjeta-credito-ui">
                         <div class="tarjeta-bg"></div>
@@ -244,7 +288,7 @@
         </div>
     </section>
 
-    <!--VISITAS RECIENTES-->
+    <!-- VISITAS RECIENTES -->
     <section class="seccion-visitas">
         <div class="contenedor-premium">
             <div class="titulo-seccion" data-aos="fade-up">
@@ -282,7 +326,7 @@
     </section>
 
 
-    <!--FOOTER-->
+    <!-- FOOTER CEMSA -->
     <footer class="footer-premium">
         <div class="footer-main">
             <!--Columna de informacion-->
@@ -357,12 +401,11 @@
                         <a href="https://www.facebook.com/jarlserv?mibextid=ZbWKwL" target="_blank"
                             class="alianza-logo glow-blanco"><img src="IMG/B3.webp" loading="lazy" alt="Jarl"></a>
                     </div>
-
                     <div class="alianzas-centro">
-                        <a href="G.html" target="_blank" class="alianza-logo alianza-principal glow-gris"><img
-                                src="IMG/GC22.webp" loading="lazy" alt="GC Grupo CEMSA"></a>
+                        <a href="http://www.cemsamx.com/G.html" target="_blank"
+                            class="alianza-logo alianza-principal glow-gris"><img src="IMG/GC22.webp" loading="lazy"
+                                alt="GC Grupo CEMSA"></a>
                     </div>
-
                     <div class="alianzas-bloque">
                         <a href="https://www.facebook.com/nazareosiap/?mibextid=ZbWKwL" target="_blank"
                             class="alianza-logo glow-naranja"><img src="IMG/B4.webp" loading="lazy" alt="Nazareos"></a>
@@ -372,7 +415,6 @@
                             class="alianza-logo glow-verde"><img src="IMG/B6.webp" loading="lazy" alt="E&C"></a>
                     </div>
                 </div>
-
                 <div class="alianzas-fila-inferior">
                     <a href="https://www.facebook.com/EPP-107946225493285" target="_blank"
                         class="alianza-logo glow-amarillo"><img src="IMG/B7.webp" loading="lazy" alt="EPP"></a>
@@ -383,7 +425,6 @@
                 </div>
             </div>
         </div>
-        </div>
 
         <!--Creditos-->
         <div class="footer-creditos">
@@ -392,8 +433,8 @@
         </div>
     </footer>
 
-    <!--ZONA DE MODALES-->
-    <!-- MODAL DE RECIBOS-->
+    <!-- ZONA DE MODALES GLOBALES -->
+    <!-- MODAL DE RECIBOS -->
     <div id="modal-recibos" class="modal-ventana">
         <div class="modal-contenido">
             <span class="cerrar-modal">&times;</span>
@@ -420,7 +461,7 @@
         </div>
     </div>
 
-    <!--Modal porta voz-->
+    <!-- Modal porta voz -->
     <div id="modal-portavoz" class="modal-ventana">
         <div class="modal-contenido text-center">
             <span class="cerrar-modal">&times;</span>
@@ -436,7 +477,7 @@
         </div>
     </div>
 
-    <!--Modal Ubicacion-->
+    <!-- Modal Ubicacion -->
     <div id="modal-ubicacion" class="modal-ventana">
         <div class="modal-contenido">
             <span class="cerrar-modal">&times;</span>
@@ -449,7 +490,7 @@
         </div>
     </div>
 
-    <!--Modal telefonos-->
+    <!-- Modal telefonos -->
     <div id="modal-telefonos" class="modal-ventana">
         <div class="modal-contenido text-center">
             <span class="cerrar-modal">&times;</span>
@@ -468,7 +509,7 @@
         </div>
     </div>
 
-    <!--Modal Correos-->
+    <!-- Modal Correos -->
     <div id="modal-correo" class="modal-ventana">
         <div class="modal-contenido text-center">
             <span class="cerrar-modal">&times;</span>
@@ -486,7 +527,7 @@
         </div>
     </div>
 
-    <!--Modal FAQ-->
+    <!-- Modal FAQ -->
     <div id="modal-faq" class="modal-ventana">
         <div class="modal-contenido">
             <span class="cerrar-modal">&times;</span>
@@ -503,7 +544,7 @@
         </div>
     </div>
 
-    <!--Modal fundador-->
+    <!-- Modal fundador -->
     <div id="modal-fundador" class="modal-ventana">
         <div class="modal-contenido modal-carta">
             <span class="cerrar-modal">&times;</span>
@@ -512,7 +553,7 @@
         </div>
     </div>
 
-    <!--Modal privacidad-->
+    <!-- Modal privacidad -->
     <div id="modal-privacidad" class="modal-ventana">
         <div class="modal-contenido text-center">
             <span class="cerrar-modal">&times;</span>
@@ -526,7 +567,7 @@
         </div>
     </div>
 
-    <!--Modal transparencia-->
+    <!-- Modal transparencia -->
     <div id="modal-transparencia" class="modal-ventana">
         <div class="modal-contenido">
             <span class="cerrar-modal">&times;</span>
@@ -542,6 +583,48 @@
                     <option value="Transparencia">Informe de Transparencia</option>
                 </select>
                 <button type="submit" class="btn-naranja-pill btn-enviar-form">Enviar</button>
+
+                <!-- Checkbox Privacidad -->
+                <div class="checkbox-privacidad">
+                    <input type="checkbox" required id="terminos-transparencia">
+                    <label for="terminos-transparencia">
+                        Acepto el tratamiento de mis datos conforme al <a href="MEDIA/Aviso de privacidad CH.pdf"
+                            target="_blank">Aviso de Privacidad</a>.
+                    </label>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL ESCRIBENOS -->
+    <div id="modal-escribenos" class="modal-ventana">
+        <div class="modal-contenido">
+            <span class="cerrar-modal">&times;</span>
+            <h2 class="titulo-modal text-center mb-4">Escríbenos</h2>
+            <form action="https://formsubmit.co/contacto@nazareosiap.org" method="POST" class="form-premium">
+                <input type="text" name="Nombre" placeholder="Nombre Completo" required>
+                <input type="tel" name="Telefono" placeholder="Número Telefónico" required maxlength="10">
+                <input type="email" name="Correo" placeholder="Correo Electrónico" required>
+                <select name="Asunto" required>
+                    <option value="" disabled selected>Selecciona un asunto...</option>
+                    <option value="Visita">Visita</option>
+                    <option value="Voluntariado">Voluntariado</option>
+                    <option value="Donaciones">Donaciones</option>
+                    <option value="Servicio">Servicio Social</option>
+                    <option value="Formador">Ser Colaborador</option>
+                </select>
+                <input type="text" name="Texto" placeholder="Comentario y/o Asunto diferente" required>
+                <input type="hidden" name="_captcha" value="false">
+                <button type="submit" class="btn-naranja-pill btn-full mt-3">Enviar Mensaje</button>
+
+                <!-- Checkbox Privacidad -->
+                <div class="checkbox-privacidad">
+                    <input type="checkbox" required id="terminos-escribenos">
+                    <label for="terminos-escribenos">
+                        Acepto el tratamiento de mis datos conforme al <a href="MEDIA/Aviso de privacidad CH.pdf"
+                            target="_blank">Aviso de Privacidad</a>.
+                    </label>
+                </div>
             </form>
         </div>
     </div>
@@ -552,18 +635,26 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <!-- AVISO DE COOKIES -->
-    <div id="aviso-cookies" class="aviso-cookies">
-        <div class="cookies-texto">
-            Utilizamos cookies propias y de terceros para mejorar tu experiencia y analizar el tráfico de nuestro sitio.
-            Al continuar navegando, aceptas nuestra <a href="#" class="abrir-modal"
-                data-modal="modal-privacidad">Política de Privacidad</a>.
+    <!-- AVISO DE COOKIES (UIVERSE) -->
+    <div id="aviso-cookies" class="cookie-card">
+        <svg class="cookie-icon" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"></path>
+            <path d="M8.5 8.5v.01"></path>
+            <path d="M16 15.5v.01"></path>
+            <path d="M12 12v.01"></path>
+            <path d="M11 17v.01"></path>
+            <path d="M7 14v.01"></path>
+        </svg>
+        <span class="cookie-title">Uso de cookies</span>
+        <p class="cookie-desc">Utilizamos cookies para mejorar tu experiencia y analizar el tráfico de nuestro sitio.
+            Conoce nuestra <a href="MEDIA/Aviso de privacidad CH.pdf" target="_blank">Política de Privacidad</a>.</p>
+        <div class="cookie-actions">
+            <button id="btn-aceptar-cookies" class="cookie-btn btn-allow">Aceptar</button>
+            <button id="btn-rechazar-cookies" class="cookie-btn btn-decline">Rechazar</button>
         </div>
-        <button id="btn-aceptar-cookies" class="btn-aceptar-cookies">Entendido</button>
     </div>
 
-
-    <!-- SCRIPTS LIMPIOS -->
+    <!-- SCRIPTS LIMPIOS Y CONSOLIDADOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ once: false, offset: 100 });
@@ -574,7 +665,7 @@
         });
 
         document.addEventListener("DOMContentLoaded", () => {
-            // MODALES
+            // MODALES GLOBALES
             const botonesAbrir = document.querySelectorAll('.abrir-modal');
             const modales = document.querySelectorAll('.modal-ventana');
 
@@ -621,17 +712,19 @@
             // COOKIES
             const avisoCookies = document.getElementById('aviso-cookies');
             const btnAceptar = document.getElementById('btn-aceptar-cookies');
+            const btnRechazar = document.getElementById('btn-rechazar-cookies');
 
             if (!localStorage.getItem('cookies_aceptadas')) {
                 setTimeout(() => avisoCookies.classList.add('mostrar'), 1000);
             }
 
-            if (btnAceptar) {
-                btnAceptar.addEventListener('click', () => {
-                    avisoCookies.classList.remove('mostrar');
-                    localStorage.setItem('cookies_aceptadas', 'true');
-                });
-            }
+            const ocultarCookies = () => {
+                avisoCookies.classList.remove('mostrar');
+                localStorage.setItem('cookies_aceptadas', 'true');
+            };
+
+            if (btnAceptar) btnAceptar.addEventListener('click', ocultarCookies);
+            if (btnRechazar) btnRechazar.addEventListener('click', ocultarCookies);
         });
     </script>
 </body>
