@@ -13,10 +13,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
     <!--Iconos-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.x.x/css/all.min.css"
+        media="print" onload="this.media='all'">
     <!--Animaciones AOS-->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" media="print" onload="this.media='all'">
 
     <!--Google Analytics-->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6V5BJV51M9"></script>
@@ -125,7 +129,7 @@
                         <a href="Sumate.html#donacion-paypal" class="btn-outline">Ver opciones de donación</a>
                     </div>
                 </div>
-                                                              
+
                 <!--Tarjeta 2-->
                 <div class="card-premium" data-aos="fade-left" data-aos-delay="300">
                     <div class="card-img" style="background-color: var(--color-blanco);">
@@ -577,7 +581,7 @@
     </div>
 
     <!--SCRIPTS LIMPIOS Y CONSOLIDADOS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
     <script>
         AOS.init({ once: false, offset: 100 });
 
